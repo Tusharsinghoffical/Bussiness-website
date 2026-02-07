@@ -28,7 +28,7 @@ const About: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center md:items-start mb-20">
           <div className="w-44 h-56 sm:w-56 sm:h-72 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200 dark:shadow-slate-900/50 relative group shrink-0 border-4 border-white dark:border-slate-800">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
+              src="/me.png" 
               alt="Tushar Singh" 
               className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
             />
@@ -49,9 +49,13 @@ const About: React.FC = () => {
                <div className="flex items-center gap-2 text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest bg-slate-50 dark:bg-slate-900 px-4 py-2 rounded-xl border border-slate-100 dark:border-white/5">
                   <MapPin size={14} className="text-indigo-500 dark:text-indigo-400" /> Delhi, India
                </div>
-               <button className="flex items-center gap-2 text-[9px] font-black text-white dark:text-slate-950 bg-slate-950 dark:bg-white hover:bg-indigo-600 dark:hover:bg-indigo-50 px-6 py-2 rounded-xl transition-all shadow-xl uppercase tracking-widest group">
+               <a 
+                 href="/Tushar_Singh_Resume.pdf" 
+                 download="Tushar_Singh_Resume.pdf"
+                 className="flex items-center gap-2 text-[9px] font-black text-white dark:text-slate-950 bg-slate-950 dark:bg-white hover:bg-indigo-600 dark:hover:bg-indigo-50 px-6 py-2 rounded-xl transition-all shadow-xl uppercase tracking-widest group"
+               >
                   <Download size={14} className="group-hover:-translate-y-0.5 transition-transform" /> Download Resume
-               </button>
+               </a>
             </div>
           </div>
         </div>
