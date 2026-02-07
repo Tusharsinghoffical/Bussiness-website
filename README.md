@@ -158,10 +158,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Tushar Singh (Mr. Singh)**
-- 📧 Email: [your-email@example.com]
-- 💼 LinkedIn: [linkedin.com/in/yourprofile]
-- 🐙 GitHub: [github.com/yourusername]
-- 🌐 Website: [your-portfolio-url]
+- 🌐 Website: [codewithmrsingh.me](https://codewithmrsingh.me)
+- 💼 LinkedIn: [linkedin.com/in/tusharsingh2011](https://linkedin.com/in/tusharsingh2011)
+- 🐙 GitHub: [github.com/Tusharsinghoffical](https://github.com/Tusharsinghoffical)
+- 📧 Email: [tusharsinghkumar04@gmail.com](mailto:tusharsinghkumar04@gmail.com)
 
 ---
 
@@ -169,6 +169,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ using React, TypeScript & Vite**
 
-[![Star](https://img.shields.io/github/stars/yourusername/business-website?style=social)](https://github.com/yourusername/business-website)
+[![Star](https://img.shields.io/github/stars/Tusharsinghoffical/Bussiness-website?style=social)](https://github.com/Tusharsinghoffical/Bussiness-website)
 
 </div>
