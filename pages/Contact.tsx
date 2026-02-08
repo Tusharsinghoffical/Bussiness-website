@@ -43,18 +43,22 @@ const Contact: React.FC = () => {
       message: formData.get('message') as string,
     };
 
-    const whatsappMessage = `New Inquiry from: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
-Company: ${data.company}
-Service Interested: ${data.service}
-Budget Range: ${data.budget}
-Timeline: ${data.timeline}
-Priority: ${data.priority}
-Message:
+    const whatsappMessage = `[PARTNER REGISTRY]
+🔹 Identity: ${data.name}
+📧 Endpoint: ${data.email}
+📱 Terminal: ${data.phone}
+🏢 Organization: ${data.company}
+
+[DEPLOYMENT SCOPE]
+⚡ System Category: ${data.service}
+💰 Language: ${data.budget}
+🎯 Execution Priority: ${data.priority}
+
+[TECHNICAL BRIEFING]
 ${data.message}
 
-Sent via C.MS Contact Portal`;
+─────────────────
+📡 Sync via C.MS Portal • ${new Date().toLocaleString()}`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/918851619647?text=${encodedMessage}`;
@@ -198,14 +202,13 @@ Sent via C.MS Contact Portal`;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-4">
                         <label className="flex items-center gap-2.5 text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest ml-1">
-                          <Wallet size={12} className="text-indigo-600 dark:text-indigo-400" /> Investment Range
+                          <Wallet size={12} className="text-indigo-600 dark:text-indigo-400" /> Language
                         </label>
                         <div className="relative group">
                           <select name="budget" className="w-full px-6 py-5 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 rounded-2xl focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-900 focus:ring-4 focus:ring-indigo-500/10 transition-all font-bold text-slate-950 dark:text-white text-xs sm:text-sm appearance-none cursor-pointer shadow-sm">
-                            <option value="5-20k">₹5,000 — ₹20,000</option>
-                            <option value="20-50k">₹20,000 — ₹50,000</option>
-                            <option value="50-100k">₹50,000 — ₹1,00,000</option>
-                            <option value="100k+">₹1,00,000+</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="other">Other</option>
                           </select>
                           <ChevronDown size={16} className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none group-hover:text-indigo-500 transition-colors" />
                         </div>
@@ -217,9 +220,9 @@ Sent via C.MS Contact Portal`;
                         </label>
                         <div className="relative group">
                           <select name="priority" className="w-full px-6 py-5 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 rounded-2xl focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-900 focus:ring-4 focus:ring-indigo-500/10 transition-all font-bold text-slate-950 dark:text-white text-xs sm:text-sm appearance-none cursor-pointer shadow-sm">
-                            <option value="urgent">Urgent Delivery</option>
-                            <option value="standard">Standard Brief</option>
-                            <option value="long-term">Long-term Collaboration</option>
+                            <option value="urgent">Urgent Delivery - Extra charges </option>
+                            <option value="standard">Standard Brief - No extra charges</option>
+                            <option value="long-term">Long-term Collaboration - Additional charges</option>
                           </select>
                           <ChevronDown size={16} className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none group-hover:text-indigo-500 transition-colors" />
                         </div>
