@@ -103,8 +103,8 @@ const About: React.FC = () => {
                 <EducationCard 
                   degree="Master of Computer Applications"
                   school="MIT ADT University, Pune"
-                  period="Oct 2024 - 2026"
-                  grade="CGPA 7.9"
+                  period="Oct 2024 - June 2026"
+                  grade="CGPA 8.4"
                 />
                 <EducationCard 
                   degree="Bachelor of Computer Applications"

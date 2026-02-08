@@ -165,7 +165,7 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
   );
 };
 
-const PageWrapper: React.FC<{ children: React.ReactNode, title: string, description: string }> = ({ children, title, description }) => {
+const PageWrapper: React.FC<{ children: React.ReactNode, title: string, description: string, keywords?: string }> = ({ children, title, description, keywords }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -175,7 +175,19 @@ const PageWrapper: React.FC<{ children: React.ReactNode, title: string, descript
       if (el) el.setAttribute('content', content);
     };
     setMeta('meta[name="description"]', description);
+    if (keywords) {
+      let keywordsEl = document.querySelector('meta[name="keywords"]');
+      if (!keywordsEl) {
+        keywordsEl = document.createElement('meta');
+        keywordsEl.setAttribute('name', 'keywords');
+        document.head.appendChild(keywordsEl);
+      }
+      keywordsEl.setAttribute('content', keywords);
+    }
     setMeta('meta[property="og:title"]', `${title} | Code with Mr. Singh`);
+    setMeta('meta[property="og:description"]', description);
+    setMeta('meta[property="og:url"]', `https://codewithmrsingh.me${location.pathname}`);
+    setMeta('link[rel="canonical"]', `https://codewithmrsingh.me${location.pathname}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location, title, description]);
 
@@ -194,12 +206,12 @@ const App: React.FC = () => {
           <Navbar />
           <main id="main-content" className="flex-grow w-full overflow-x-hidden">
             <Routes>
-              <Route path="/" element={<PageWrapper title="Elite AI & Data Solutions" description="High-performance AI solutions."><Home /></PageWrapper>} />
-              <Route path="/about" element={<PageWrapper title="Meet Tushar Singh" description="Freelance tech architect background."><About /></PageWrapper>} />
-              <Route path="/services" element={<PageWrapper title="Technical Services" description="AI workflow automation pricing."><Services /></PageWrapper>} />
-              <Route path="/projects" element={<PageWrapper title="Project Portfolio" description="Gallery of tech deployments."><Projects /></PageWrapper>} />
-              <Route path="/testimonials" element={<PageWrapper title="Client Testimonials" description="Reviews and visual proof."><Testimonials /></PageWrapper>} />
-              <Route path="/contact" element={<PageWrapper title="Contact Now" description="Start a conversation today."><Contact /></PageWrapper>} />
+              <Route path="/" element={<PageWrapper title="Top Freelance Developer Delhi | Code with Mr. Singh" description="Hire India's #1 freelance Data Scientist & Full-Stack Developer. Expert in Python, AI/ML, React.js, Django. Build scalable web apps & data solutions. Based in Delhi." keywords="freelance developer delhi, data scientist india, python developer, ai ml engineer, react developer, django developer"><Home /></PageWrapper>} />
+              <Route path="/about" element={<PageWrapper title="About Tushar Singh | Freelance Developer Delhi" description="Learn about Tushar Singh, a top freelance Data Scientist & Full-Stack Developer from Delhi. MCA student with expertise in Python, AI/ML, and web development." keywords="about tushar singh, freelance developer delhi, data scientist profile, python expert, ai ml developer"><About /></PageWrapper>} />
+              <Route path="/services" element={<PageWrapper title="Freelance Development Services | Web & AI Solutions" description="Professional freelance services in Data Science, AI/ML, Full-Stack Web Development, and Automation. Custom solutions for businesses worldwide." keywords="freelance services, data science services, ai ml development, web development services, python development"><Services /></PageWrapper>} />
+              <Route path="/projects" element={<PageWrapper title="Portfolio Projects | Data Science & Web Development" description="Showcase of successful projects in Data Science, Machine Learning, Web Development, and AI Automation. Real-world solutions and case studies." keywords="project portfolio, data science projects, web development portfolio, ai projects, machine learning case studies"><Projects /></PageWrapper>} />
+              <Route path="/testimonials" element={<PageWrapper title="Client Testimonials | Verified Reviews" description="Real client testimonials and reviews for freelance Data Science & Web Development services. See what clients say about working with Tushar Singh." keywords="client testimonials, developer reviews, freelance feedback, verified reviews, client satisfaction"><Testimonials /></PageWrapper>} />
+              <Route path="/contact" element={<PageWrapper title="Contact Tushar Singh | Hire Freelance Developer" description="Get in touch with Tushar Singh for freelance Data Science, AI/ML, and Web Development projects. Available for immediate collaboration." keywords="contact developer, hire freelancer, data science consultation, web development inquiry, ai project discussion"><Contact /></PageWrapper>} />
             </Routes>
           </main>
           <WhatsAppButton />

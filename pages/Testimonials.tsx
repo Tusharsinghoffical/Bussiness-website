@@ -98,9 +98,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
       </p>
 
       <div className="flex items-center gap-3 mt-auto pt-6 border-t border-slate-50 dark:border-white/5">
-        <div className="w-10 h-10 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0 border border-slate-100 dark:border-white/5 shadow-sm">
-          <img src={testimonial.avatarUrl} alt={testimonial.clientName} className="w-full h-full object-cover" />
-        </div>
+        
         <div>
           <h4 className="text-slate-950 dark:text-white font-bold text-[13px] leading-tight mb-0.5">{testimonial.clientName}</h4>
           <div className="flex items-center gap-1.5">

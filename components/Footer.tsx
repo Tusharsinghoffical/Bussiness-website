@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
             <div className="space-y-2 lg:space-y-4">
               <h3 className="text-white font-black text-[8px] lg:text-[10px] uppercase tracking-[0.3em] opacity-40">Core Philosophy</h3>
               <p className="text-slate-400 text-[12px] lg:text-[14px] leading-relaxed max-w-sm font-medium italic">
-                "Solving complex industrial challenges through the lens of automated data intelligence."
+                "Solving complex industrial challenges through <Link to="/services" className="text-indigo-400 hover:text-white underline transition-colors">automated data intelligence</Link>."
               </p>
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-500/5 rounded-lg border border-indigo-500/10 backdrop-blur-sm">
