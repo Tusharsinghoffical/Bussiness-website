@@ -101,7 +101,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p1',
     title: 'AI Agent Chatbot (JSON)',
-    description: ' Intelligent conversational agent designed for automated JSON-based conversational flows and system triggers.',
+    description: 'Built to automate customer service conversations with intelligent chatbot capabilities. Processes natural language queries, maintains conversation context, and integrates with business systems to provide instant responses. Purpose: Reduce manual customer support workload and provide 24/7 automated assistance.',
     imageUrl: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Home_Dev_O_Ps_43aa01a07b.webp',
     galleryUrls: [
       'https://ohlinger.co/assets/img/AI/ai_agents.jpeg',
@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p2',
     title: 'Google Sheets Agent (JSON)',
-    description: ' Dynamic automation agent bridging spreadsheet data with external API endpoints.',
+    description: 'Automates data transfer between Google Sheets and external APIs without manual intervention. Reads spreadsheet data, validates entries, and sends information to connected services automatically. Purpose: Eliminate repetitive data entry tasks and synchronize business information across multiple platforms seamlessly.',
     imageUrl: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/large_Darker_Home_4699f79534.webp',
     galleryUrls: [
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p3',
     title: 'SerpAPI Flight Agent (JSON)',
-    description: ' Real-time flight search and retrieval agent powered by SerpAPI integration.',
+    description: 'Searches and compares flight prices from multiple airlines in real-time using SerpAPI integration. Shows available flights, prices, and booking options instantly. Purpose: Help travelers find the best flight deals quickly and make informed booking decisions without visiting multiple airline websites.',
     imageUrl: 'https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqhkkls5ddvzvnqbb5w5w.png',
     galleryUrls: [
       'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=800',
@@ -140,7 +140,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p4',
     title: 'WhatsApp Agent (JSON)',
-    description: ' Messaging automation system for WhatsApp business protocol handling.  ',
+    description: 'Handles WhatsApp business communications automatically including message routing, template responses, and conversation management. Sends automated replies and manages customer inquiries 24/7. Purpose: Streamline business communication, improve response times, and provide consistent customer service through WhatsApp platform.',
     imageUrl: 'https://preview.redd.it/build-a-whatsapp-ai-agent-appointment-setter-in-n8n-v0-7jbgbregm0rf1.jpeg?auto=webp&s=2c499f919ec112c179f68adc5032d56fd6dac40b',
     galleryUrls: ['https://unsplash.com/photos/green-and-white-apple-logo-_qsuER9xYOY'],
     category: 'AI Agents',
@@ -152,7 +152,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p5',
     title: 'E-Commerce Marketplace',
-    description: ' Feature-rich digital marketplace built with Python/Django, featuring robust payment and inventory modules.',
+    description: 'Online shopping platform where customers can browse products, add to cart, make payments, and track orders. Handles inventory management, user accounts, and secure transactions. Purpose: Enable businesses to sell products online with professional e-commerce capabilities and streamlined customer purchasing experience.',
     imageUrl: 'https://cdn-cchkmpj.nitrocdn.com/CJXGnJvCvbQYOSNVvxpLvOYcHhpJDKbH/assets/images/optimized/rev-c8d6732/ossisto.com/wp-content/uploads/2024/05/What-is-a-online-marketplace-services.webp',
     galleryUrls: [
       'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800',
@@ -166,7 +166,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p6',
     title: 'Hospital Website',
-    description: ' Medical portal for clinical appointment management and real-time facility logistics.',
+    description: 'Manages hospital appointments, patient records, and medical facility operations digitally. Allows patients to book appointments online and doctors to manage schedules efficiently. Purpose: Modernize healthcare administration, reduce paperwork, and improve patient access to medical services through digital transformation.',
     imageUrl: 'https://img.freepik.com/free-vector/hand-drawn-hospital-reception-scene-with-people-wearing-medical-masks_23-2148831587.jpg?semt=ais_hybrid&w=740&q=80',
     galleryUrls: [
       'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
@@ -179,7 +179,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p7',
     title: 'Restaurant Website',
-    description: ' Elegant dining portal with menu virtualization and table reservation engine.',
+    description: 'Digital restaurant platform for online menu browsing, table reservations, and food ordering. Customers can view menus, book tables, and place orders through website or mobile. Purpose: Modernize restaurant operations, increase customer convenience, and boost revenue through online ordering and reservation systems.',
     imageUrl: 'https://pic.pikbest.com/02/24/10/21m888piCJW3.jpg!bw700',
     galleryUrls: [
       'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
@@ -194,7 +194,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p10',
     title: 'Hospital Analysis Data',
-    description: ' High-density healthcare visualization tracking patient throughput and medical resource allocation.',
+    description: 'Analyzes hospital data to track patient flow, bed availability, staff scheduling, and medical resource usage. Creates visual reports showing healthcare operational efficiency. Purpose: Help hospital administrators make data-driven decisions to optimize patient care, resource allocation, and operational costs.',
     imageUrl: 'https://vnbconsulting.com/wp-content/uploads/2020/01/image11.png',
     galleryUrls: [
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
@@ -208,7 +208,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p11',
     title: 'HR Analysis Data',
-    description: ' Workforce intelligence dashboard analyzing employee performance and retention metrics.',
+    description: 'Tracks employee performance, analyzes workforce data, and monitors HR metrics like retention and productivity. Generates reports on organizational health and talent management. Purpose: Enable HR teams to make informed decisions about staffing, training, and employee development based on data insights.',
     imageUrl: 'https://media.licdn.com/dms/image/v2/D5612AQHSOLZTaGpdtA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721390299249?e=2147483647&v=beta&t=HUdNwvJRwZXpVBgylCLmq6TLYKOjK0tk4tlazMYqpjc',
     galleryUrls: [
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
@@ -221,7 +221,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p12',
     title: 'SuperStore Sales Data',
-    description: ' E-commerce retail engine analyzing multi-regional profit margins and inventory turnover.',
+    description: 'Analyzes retail sales data across different regions to track profits, inventory levels, and customer buying patterns. Identifies best-selling products and optimal pricing strategies. Purpose: Help retailers understand market performance, optimize inventory management, and maximize profitability through data-driven business decisions.',
     imageUrl: 'https://metricalist.com/wp-content/uploads/2023/05/Superstore%20Sales%20Dashboard%202.PNG',
     galleryUrls: [
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
@@ -236,7 +236,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p13',
     title: 'Credit Card Fraud Detection',
-    description: ' Neural anomaly detection system for high-precision identification of fraudulent transactions.',
+    description: 'Detects fraudulent credit card transactions by analyzing spending patterns and identifying suspicious activities in real-time. Uses machine learning to distinguish between legitimate and fraudulent charges. Purpose: Protect consumers and financial institutions from payment fraud losses while minimizing false declined transactions.',
     imageUrl: 'https://ai-journey.com/wp-content/uploads/2019/06/fraud-EMV-chip-credit-card.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
@@ -249,7 +249,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p14',
     title: 'Iris Classification Model',
-    description: ' Optimized multi-class classification engine for botanical taxonomy using Scikit-learn.',
+    description: 'Classifies iris flower species using machine learning algorithms based on measurements like petal length and width. Demonstrates fundamental classification techniques in data science. Purpose: Educational tool for learning machine learning concepts and comparing different classification algorithms on a classic dataset.',
     imageUrl: 'https://static.wixstatic.com/media/f9980f_33c637888bd04c38bc31c8ccf943079f~mv2.png/v1/fill/w_568,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f9980f_33c637888bd04c38bc31c8ccf943079f~mv2.png',
     galleryUrls: [
       'https://images.unsplash.com/photo-1520412099551-6296b0db5c04?auto=format&fit=crop&q=80&w=800',
@@ -262,7 +262,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p15',
     title: 'Sales Advertising Analysis',
-    description: ' Regression-based intelligence analyzing ad-spend efficiency versus revenue growth.',
+    description: 'Analyzes advertising campaign performance by examining spending patterns and measuring return on investment. Determines which marketing channels generate the best results for businesses. Purpose: Help marketers optimize advertising budgets by identifying high-performing campaigns and eliminating ineffective spending.',
     imageUrl: 'https://infoset.app/blog/wp-content/uploads/2022/09/what-is-sales-analysis-how-to-prepare-a-sales-analysis-Report0A.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
@@ -275,7 +275,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p16',
     title: 'Unemployment Prediction Model',
-    description: ' Time-series forecasting engine predicting economic workforce shifts and labor trends.',
+    description: 'Predicts future unemployment rates by analyzing historical employment data and economic trends. Forecasts labor market conditions to help with workforce planning. Purpose: Assist policymakers, businesses, and researchers in understanding employment trends and preparing for future labor market changes.',
     imageUrl: 'https://bl-i.thgim.com/public/incoming/97zz48/article69815187.ece/alternates/FREE_1200/IMG_iStock-1217160806_2_1_0LAJ5446.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1454165833767-13a6b060102b?auto=format&fit=crop&q=80&w=800',
@@ -290,7 +290,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p17',
     title: 'IPO Platform',
-    description: ' Specialized fintech engine for tracking public offering dynamics and investor data.',
+    description: 'Tracks Initial Public Offering (IPO) activities, monitors stock market data, and analyzes investment opportunities for companies going public. Provides real-time IPO information and performance metrics. Purpose: Help investors and financial professionals stay informed about new stock offerings and make educated investment decisions in the public markets.',
     imageUrl: 'https://assets.upstox.com/content/assets/images/news/shutterstock2503903627-1-1.webp',
     galleryUrls: [
       'https://images.unsplash.com/photo-1611974714024-4607a50d6c2a?auto=format&fit=crop&q=80&w=800',
@@ -303,7 +303,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p18',
     title: 'VAS QR System',
-    description: ' Enterprise portal for Value Added Services (VAS) commercial logistics and client ops.',
+    description: 'Manages Value Added Services through QR code technology, enabling customers to access special offers, loyalty programs, and premium services by scanning codes. Handles service subscriptions and customer rewards. Purpose: Simplify service delivery, enhance customer engagement, and streamline loyalty program management through convenient QR code-based interactions.',
     imageUrl: 'https://fairshare.tech/wp-content/uploads/2019/01/QR_code_attendance.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800',
