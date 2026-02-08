@@ -102,7 +102,7 @@ export const PROJECTS: Project[] = [
     id: 'p1',
     title: 'AI Agent Chatbot (JSON)',
     description: ' Intelligent conversational agent designed for automated JSON-based conversational flows and system triggers.',
-    imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Home_Dev_O_Ps_43aa01a07b.webp',
     galleryUrls: [
       'https://ohlinger.co/assets/img/AI/ai_agents.jpeg',
     'https://ohlinger.co/assets/img/AI/ai_agents.jpeg'],
@@ -113,22 +113,9 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'p2',
-    title: 'Chatbot AI Agents (JSON)',
-    description: ' NLP-powered agent optimized for intelligent business interaction and intent recognition.',
-    imageUrl: 'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800',
-    galleryUrls: [
-      'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
-    ],
-    category: 'AI Agents',
-    tags: ['JSON', 'NLP', 'Automation'],
-    date: '2025'
-  },
-  {
-    id: 'p3',
     title: 'Google Sheets Agent (JSON)',
     description: ' Dynamic automation agent bridging spreadsheet data with external API endpoints.',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/large_Darker_Home_4699f79534.webp',
     galleryUrls: [
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800'
@@ -138,10 +125,10 @@ export const PROJECTS: Project[] = [
     date: '2025'
   },
   {
-    id: 'p4',
+    id: 'p3',
     title: 'SerpAPI Flight Agent (JSON)',
     description: ' Real-time flight search and retrieval agent powered by SerpAPI integration.',
-    imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqhkkls5ddvzvnqbb5w5w.png',
     galleryUrls: [
       'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1517022812141-23620dba5c23?auto=format&fit=crop&q=80&w=800'
@@ -151,14 +138,11 @@ export const PROJECTS: Project[] = [
     date: '2025'
   },
   {
-    id: 'p5',
+    id: 'p4',
     title: 'WhatsApp Agent (JSON)',
-    description: ' Messaging automation system for WhatsApp business protocol handling.',
-    imageUrl: 'https://images.unsplash.com/photo-1611743575667-95888002446d?auto=format&fit=crop&q=80&w=800',
-    galleryUrls: [
-      'https://images.unsplash.com/photo-1611743575667-95888002446d?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1587560699334-cc4ff634909a?auto=format&fit=crop&q=80&w=800'
-    ],
+    description: ' Messaging automation system for WhatsApp business protocol handling.  ',
+    imageUrl: 'https://preview.redd.it/build-a-whatsapp-ai-agent-appointment-setter-in-n8n-v0-7jbgbregm0rf1.jpeg?auto=webp&s=2c499f919ec112c179f68adc5032d56fd6dac40b',
+    galleryUrls: ['https://unsplash.com/photos/green-and-white-apple-logo-_qsuER9xYOY'],
     category: 'AI Agents',
     tags: ['JSON', 'WhatsApp', 'Messaging'],
     date: '2025'
@@ -166,10 +150,10 @@ export const PROJECTS: Project[] = [
 
   // --- WEB DEVELOPMENT ---
   {
-    id: 'p6',
+    id: 'p5',
     title: 'E-Commerce Marketplace',
     description: ' Feature-rich digital marketplace built with Python/Django, featuring robust payment and inventory modules.',
-    imageUrl: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://cdn-cchkmpj.nitrocdn.com/CJXGnJvCvbQYOSNVvxpLvOYcHhpJDKbH/assets/images/optimized/rev-c8d6732/ossisto.com/wp-content/uploads/2024/05/What-is-a-online-marketplace-services.webp',
     galleryUrls: [
       'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800'
@@ -180,10 +164,10 @@ export const PROJECTS: Project[] = [
     isFeatured: true
   },
   {
-    id: 'p7',
+    id: 'p6',
     title: 'Hospital Website',
     description: ' Medical portal for clinical appointment management and real-time facility logistics.',
-    imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://img.freepik.com/free-vector/hand-drawn-hospital-reception-scene-with-people-wearing-medical-masks_23-2148831587.jpg?semt=ais_hybrid&w=740&q=80',
     galleryUrls: [
       'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800'
@@ -193,10 +177,10 @@ export const PROJECTS: Project[] = [
     date: '2024'
   },
   {
-    id: 'p8',
+    id: 'p7',
     title: 'Restaurant Website',
     description: ' Elegant dining portal with menu virtualization and table reservation engine.',
-    imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://pic.pikbest.com/02/24/10/21m888piCJW3.jpg!bw700',
     galleryUrls: [
       'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=800'
@@ -208,10 +192,10 @@ export const PROJECTS: Project[] = [
 
   // --- DATA SCIENCE / POWER BI ---
   {
-    id: 'p9',
+    id: 'p10',
     title: 'Hospital Analysis Data',
     description: ' High-density healthcare visualization tracking patient throughput and medical resource allocation.',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://vnbconsulting.com/wp-content/uploads/2020/01/image11.png',
     galleryUrls: [
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800'
@@ -222,10 +206,10 @@ export const PROJECTS: Project[] = [
     isFeatured: true
   },
   {
-    id: 'p10',
+    id: 'p11',
     title: 'HR Analysis Data',
     description: ' Workforce intelligence dashboard analyzing employee performance and retention metrics.',
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://media.licdn.com/dms/image/v2/D5612AQHSOLZTaGpdtA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721390299249?e=2147483647&v=beta&t=HUdNwvJRwZXpVBgylCLmq6TLYKOjK0tk4tlazMYqpjc',
     galleryUrls: [
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1454165833767-13a6b060102b?auto=format&fit=crop&q=80&w=1000'
@@ -235,10 +219,10 @@ export const PROJECTS: Project[] = [
     date: '2024'
   },
   {
-    id: 'p11',
+    id: 'p12',
     title: 'SuperStore Sales Data',
     description: ' E-commerce retail engine analyzing multi-regional profit margins and inventory turnover.',
-    imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://metricalist.com/wp-content/uploads/2023/05/Superstore%20Sales%20Dashboard%202.PNG',
     galleryUrls: [
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800'
@@ -250,10 +234,10 @@ export const PROJECTS: Project[] = [
 
   // --- MACHINE LEARNING ---
   {
-    id: 'p12',
+    id: 'p13',
     title: 'Credit Card Fraud Detection',
     description: ' Neural anomaly detection system for high-precision identification of fraudulent transactions.',
-    imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://ai-journey.com/wp-content/uploads/2019/06/fraud-EMV-chip-credit-card.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800'
@@ -263,10 +247,10 @@ export const PROJECTS: Project[] = [
     date: '2023'
   },
   {
-    id: 'p13',
+    id: 'p14',
     title: 'Iris Classification Model',
     description: ' Optimized multi-class classification engine for botanical taxonomy using Scikit-learn.',
-    imageUrl: 'https://images.unsplash.com/photo-1520412099551-6296b0db5c04?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://static.wixstatic.com/media/f9980f_33c637888bd04c38bc31c8ccf943079f~mv2.png/v1/fill/w_568,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f9980f_33c637888bd04c38bc31c8ccf943079f~mv2.png',
     galleryUrls: [
       'https://images.unsplash.com/photo-1520412099551-6296b0db5c04?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
@@ -276,10 +260,10 @@ export const PROJECTS: Project[] = [
     date: '2023'
   },
   {
-    id: 'p14',
+    id: 'p15',
     title: 'Sales Advertising Analysis',
     description: ' Regression-based intelligence analyzing ad-spend efficiency versus revenue growth.',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://infoset.app/blog/wp-content/uploads/2022/09/what-is-sales-analysis-how-to-prepare-a-sales-analysis-Report0A.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
@@ -289,10 +273,10 @@ export const PROJECTS: Project[] = [
     date: '2023'
   },
   {
-    id: 'p15',
+    id: 'p16',
     title: 'Unemployment Prediction Model',
     description: ' Time-series forecasting engine predicting economic workforce shifts and labor trends.',
-    imageUrl: 'https://images.unsplash.com/photo-1454165833767-13a6b060102b?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://bl-i.thgim.com/public/incoming/97zz48/article69815187.ece/alternates/FREE_1200/IMG_iStock-1217160806_2_1_0LAJ5446.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1454165833767-13a6b060102b?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=800'
@@ -304,10 +288,10 @@ export const PROJECTS: Project[] = [
 
   // --- FINTECH & ENTERPRISE ---
   {
-    id: 'p16',
+    id: 'p17',
     title: 'IPO Platform',
     description: ' Specialized fintech engine for tracking public offering dynamics and investor data.',
-    imageUrl: 'https://images.unsplash.com/photo-1611974714024-4607a50d6c2a?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://assets.upstox.com/content/assets/images/news/shutterstock2503903627-1-1.webp',
     galleryUrls: [
       'https://images.unsplash.com/photo-1611974714024-4607a50d6c2a?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
@@ -317,10 +301,10 @@ export const PROJECTS: Project[] = [
     date: '2024'
   },
   {
-    id: 'p17',
-    title: 'VAS Business Website',
+    id: 'p18',
+    title: 'VAS QR System',
     description: ' Enterprise portal for Value Added Services (VAS) commercial logistics and client ops.',
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://fairshare.tech/wp-content/uploads/2019/01/QR_code_attendance.jpg',
     galleryUrls: [
       'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1454165833767-13a6b060102b?auto=format&fit=crop&q=80&w=800'
