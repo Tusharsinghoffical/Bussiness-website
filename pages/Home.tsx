@@ -148,7 +148,7 @@ const Home: React.FC = () => {
         <div className="flex animate-marquee whitespace-nowrap gap-10 sm:gap-16">
           {[...techStack, ...techStack].map((tech, i) => (
             <div key={i} className="flex items-center gap-4 group">
-              <span className="text-white/20 font-outfit font-black text-xl sm:text-4xl uppercase tracking-tighter group-hover:text-indigo-500 transition-colors">
+              <span className="text-white/40 font-outfit font-black text-xl sm:text-4xl uppercase tracking-tighter group-hover:text-indigo-500 transition-colors">
                 {tech}
               </span>
               <Sparkles className="text-white/10 w-4 h-4 sm:w-6 sm:h-6" />
