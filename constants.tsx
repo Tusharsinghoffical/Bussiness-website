@@ -8,7 +8,7 @@ export const SERVICES: Service[] = [
     id: 's1',
     title: 'AI & Machine Learning',
     description: 'Building intelligent AI agents, chatbots, and machine learning models using Python, TensorFlow, and cutting-edge AI technologies.',
-    priceRange: 'Starting at ₹25,000',
+    priceRange: 'Contact for Price',
     icon: 'Brain',
     category: 'ml',
     features: [

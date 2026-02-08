@@ -10,6 +10,7 @@ import {
 const Contact: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
   const [time, setTime] = useState(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true }));
+  const [prefilledService, setPrefilledService] = useState<string>('');
   
   const ids = {
     name: useId(),
@@ -24,6 +25,17 @@ const Contact: React.FC = () => {
       setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true }));
     }, 1000);
     return () => clearInterval(timer);
+  }, []);
+
+  // Check for prefilled service data
+  React.useEffect(() => {
+    const storedService = sessionStorage.getItem('selectedService');
+    if (storedService) {
+      const serviceData = JSON.parse(storedService);
+      setPrefilledService(serviceData.service);
+      // Clear the stored data after using it
+      sessionStorage.removeItem('selectedService');
+    }
   }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -190,13 +202,27 @@ ${data.message}
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                         {['Web Dev', 'AI Agents', 'Data Sci', 'Consulting'].map(item => (
                           <label key={item} className="cursor-pointer group">
-                            <input type="radio" name="interest" value={item} className="sr-only peer" required />
+                            <input 
+                              type="radio" 
+                              name="interest" 
+                              value={item} 
+                              defaultChecked={prefilledService && item.includes(prefilledService.split(' ')[0])}
+                              className="sr-only peer" 
+                              required 
+                            />
                             <div className="px-3 py-5 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 rounded-2xl text-[10px] font-black uppercase tracking-[0.15em] text-slate-500 dark:text-slate-400 transition-all peer-checked:bg-slate-950 dark:peer-checked:bg-white peer-checked:text-white dark:peer-checked:text-slate-950 peer-checked:border-slate-950 dark:peer-checked:border-white peer-checked:ring-4 peer-checked:ring-indigo-500/10 text-center hover:bg-slate-100 dark:hover:bg-slate-800 active:scale-95 shadow-sm">
                               {item}
                             </div>
                           </label>
                         ))}
                       </div>
+                      {prefilledService && (
+                        <div className="text-center py-2 px-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg border border-indigo-100 dark:border-indigo-400/20">
+                          <p className="text-[9px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
+                            Pre-selected: {prefilledService}
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -238,7 +264,10 @@ ${data.message}
                       name="message"
                       required
                       rows={5}
-                      placeholder="Specify outcomes, technical constraints, and mission objectives..."
+                      placeholder={prefilledService 
+                        ? `Tell me more about your ${prefilledService.toLowerCase()} project requirements...`
+                        : "Specify outcomes, technical constraints, and mission objectives..."
+                      }
                       className="w-full px-6 py-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 rounded-[1.5rem] focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-900 focus:ring-4 focus:ring-indigo-500/10 transition-all font-medium resize-none text-slate-950 dark:text-white text-base placeholder:text-slate-400 dark:placeholder:text-slate-600 shadow-sm"
                     ></textarea>
                   </div>

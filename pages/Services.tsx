@@ -1,10 +1,23 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { SERVICES, ICON_MAP } from '../constants';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Services: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleServiceClick = (service: any) => {
+    // Store service info in sessionStorage
+    sessionStorage.setItem('selectedService', JSON.stringify({
+      service: service.title,
+      category: service.category,
+      description: service.description
+    }));
+    
+    // Navigate to contact page
+    navigate('/contact');
+  };
   return (
     <div className="pt-32 pb-24 px-6 sm:px-10 bg-white dark:bg-slate-950 min-h-screen">
       <div className="max-w-7xl mx-auto">
@@ -66,10 +79,13 @@ const Services: React.FC = () => {
                   ))}
                 </div>
 
-                <Link to="/contact" className="w-full py-4 px-6 rounded-2xl bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-indigo-600 dark:hover:bg-indigo-100 transition-all flex items-center justify-center gap-2 group/btn shadow-lg active:scale-95">
-                  Brief Inquiry
+                <button 
+                  onClick={() => handleServiceClick(service)}
+                  className="w-full py-4 px-6 rounded-2xl bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-indigo-600 dark:hover:bg-indigo-100 transition-all flex items-center justify-center gap-2 group/btn shadow-lg active:scale-95 cursor-pointer"
+                >
+                  Contact for Price
                   <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
+                </button>
               </div>
             </div>
           ))}
@@ -84,10 +100,13 @@ const Services: React.FC = () => {
           <p className="text-sm sm:text-base text-slate-400 font-medium mb-8 max-w-xl mx-auto leading-relaxed">
             Discuss bespoke solutions tailored to your specific operational scale.
           </p>
-          <Link to="/contact" className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-slate-950 text-[10px] font-black uppercase tracking-[0.25em] rounded-xl hover:bg-indigo-50 transition-all shadow-xl active:scale-95 group">
+          <button 
+            onClick={() => navigate('/contact')}
+            className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-slate-950 text-[10px] font-black uppercase tracking-[0.25em] rounded-xl hover:bg-indigo-50 transition-all shadow-xl active:scale-95 group cursor-pointer"
+          >
             Consultation Portal
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </button>
         </div>
       </div>
     </div>
