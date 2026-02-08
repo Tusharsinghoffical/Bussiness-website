@@ -12,10 +12,10 @@ export const SERVICES: Service[] = [
     icon: 'Brain',
     category: 'ml',
     features: [
-      { icon: '🔍', label: 'Fraud Detection Systems' },
-      { icon: '💬', label: 'AI Chatbots & Assistants' },
-      { icon: '📊', label: 'Predictive Analytics' },
-      { icon: '🎯', label: 'Custom ML Models' }
+      { icon: '', label: 'Fraud Detection Systems' },
+      { icon: '', label: 'AI Chatbots & Assistants' },
+      { icon: '', label: 'Predictive Analytics' },
+      { icon: '', label: 'Custom ML Models' }
     ],
     techStack: ['Python', 'TensorFlow', 'Scikit-learn', 'Gemini API']
   },
@@ -27,10 +27,10 @@ export const SERVICES: Service[] = [
     icon: 'BarChart',
     category: 'data-science',
     features: [
-      { icon: '📈', label: 'Data Visualization' },
-      { icon: '🔍', label: 'Statistical Analysis' },
-      { icon: '📊', label: 'Interactive Dashboards' },
-      { icon: '📋', label: 'Business Intelligence' }
+      { icon: '', label: 'Data Visualization' },
+      { icon: '', label: 'Statistical Analysis' },
+      { icon: '', label: 'Interactive Dashboards' },
+      { icon: '', label: 'Business Intelligence' }
     ],
     techStack: ['Python', 'Pandas', 'Power BI', 'Matplotlib']
   },
@@ -42,10 +42,10 @@ export const SERVICES: Service[] = [
     icon: 'Code',
     category: 'web-dev',
     features: [
-      { icon: '🌐', label: 'Responsive Design' },
-      { icon: '⚡', label: 'Performance Optimization' },
-      { icon: '🎨', label: 'Modern UI/UX' },
-      { icon: '🔧', label: 'Custom Solutions' }
+      { icon: '', label: 'Responsive Design' },
+      { icon: '', label: 'Performance Optimization' },
+      { icon: '', label: 'Modern UI/UX' },
+      { icon: '', label: 'Custom Solutions' }
     ],
     techStack: ['HTML', 'CSS', 'JavaScript', 'Python']
   },
@@ -57,10 +57,10 @@ export const SERVICES: Service[] = [
     icon: 'Terminal',
     category: 'ai-agents',
     features: [
-      { icon: '🧭', label: 'Autonomous Task Planning' },
-      { icon: '🗂️', label: 'RAG & Knowledge Retrieval' },
-      { icon: '🔗', label: 'Tool Use & Integrations' },
-      { icon: '🤝', label: 'Multi‑Agent Workflows' }
+      { icon: '', label: 'Autonomous Task Planning' },
+      { icon: '', label: 'RAG & Knowledge Retrieval' },
+      { icon: '', label: 'Tool Use & Integrations' },
+      { icon: '', label: 'Multi‑Agent Workflows' }
     ],
     techStack: ['Python', 'Gemini API', 'LLM Orchestration', 'Vector DB']
   },
@@ -72,10 +72,10 @@ export const SERVICES: Service[] = [
     icon: 'Settings',
     category: 'web-dev',
     features: [
-      { icon: '🛠️', label: 'Custom Software' },
-      { icon: '⚙️', label: 'Process Automation' },
-      { icon: '🔍', label: 'Debugging & Support' },
-      { icon: '📈', label: 'Performance Optimization' }
+      { icon: '', label: 'Custom Software' },
+      { icon: '', label: 'Process Automation' },
+      { icon: '', label: 'Debugging & Support' },
+      { icon: '', label: 'Performance Optimization' }
     ],
     techStack: ['Python', 'Automation', 'Debugging', 'Optimization']
   },
@@ -87,10 +87,10 @@ export const SERVICES: Service[] = [
     icon: 'Palette',
     category: 'design',
     features: [
-      { icon: '🎨', label: 'Brand Identity' },
-      { icon: '📺', label: 'YouTube Thumbnails' },
-      { icon: '✨', label: 'Vector Graphics' },
-      { icon: '📐', label: 'Logo Systems' }
+      { icon: '', label: 'Brand Identity' },
+      { icon: '', label: 'YouTube Thumbnails' },
+      { icon: '', label: 'Vector Graphics' },
+      { icon: '', label: 'Logo Systems' }
     ],
     techStack: ['Photoshop', 'Illustrator', 'Canva', 'Figma']
   }
@@ -101,12 +101,11 @@ export const PROJECTS: Project[] = [
   {
     id: 'p1',
     title: 'AI Agent Chatbot (JSON)',
-    description: '🤖 Intelligent conversational agent designed for automated JSON-based conversational flows and system triggers.',
+    description: ' Intelligent conversational agent designed for automated JSON-based conversational flows and system triggers.',
     imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800'
-    ],
+      'https://ohlinger.co/assets/img/AI/ai_agents.jpeg',
+    'https://ohlinger.co/assets/img/AI/ai_agents.jpeg'],
     category: 'AI Agents',
     tags: ['JSON', 'AI Agent', 'Automation'],
     date: '2025',
@@ -115,7 +114,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p2',
     title: 'Chatbot AI Agents (JSON)',
-    description: '📊 NLP-powered agent optimized for intelligent business interaction and intent recognition.',
+    description: ' NLP-powered agent optimized for intelligent business interaction and intent recognition.',
     imageUrl: 'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800',
@@ -128,7 +127,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p3',
     title: 'Google Sheets Agent (JSON)',
-    description: '📈 Dynamic automation agent bridging spreadsheet data with external API endpoints.',
+    description: ' Dynamic automation agent bridging spreadsheet data with external API endpoints.',
     imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
@@ -141,7 +140,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p4',
     title: 'SerpAPI Flight Agent (JSON)',
-    description: '✈️ Real-time flight search and retrieval agent powered by SerpAPI integration.',
+    description: ' Real-time flight search and retrieval agent powered by SerpAPI integration.',
     imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=800',
@@ -154,7 +153,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p5',
     title: 'WhatsApp Agent (JSON)',
-    description: '📱 Messaging automation system for WhatsApp business protocol handling.',
+    description: ' Messaging automation system for WhatsApp business protocol handling.',
     imageUrl: 'https://images.unsplash.com/photo-1611743575667-95888002446d?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1611743575667-95888002446d?auto=format&fit=crop&q=80&w=800',
@@ -169,7 +168,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p6',
     title: 'E-Commerce Marketplace',
-    description: '🛍️ Feature-rich digital marketplace built with Python/Django, featuring robust payment and inventory modules.',
+    description: ' Feature-rich digital marketplace built with Python/Django, featuring robust payment and inventory modules.',
     imageUrl: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800',
@@ -183,7 +182,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p7',
     title: 'Hospital Website',
-    description: '🏥 Medical portal for clinical appointment management and real-time facility logistics.',
+    description: ' Medical portal for clinical appointment management and real-time facility logistics.',
     imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
@@ -196,7 +195,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p8',
     title: 'Restaurant Website',
-    description: '🍽️ Elegant dining portal with menu virtualization and table reservation engine.',
+    description: ' Elegant dining portal with menu virtualization and table reservation engine.',
     imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
@@ -211,7 +210,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p9',
     title: 'Hospital Analysis Data',
-    description: '🏥 High-density healthcare visualization tracking patient throughput and medical resource allocation.',
+    description: ' High-density healthcare visualization tracking patient throughput and medical resource allocation.',
     imageUrl: 'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
@@ -225,7 +224,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p10',
     title: 'HR Analysis Data',
-    description: '👥 Workforce intelligence dashboard analyzing employee performance and retention metrics.',
+    description: ' Workforce intelligence dashboard analyzing employee performance and retention metrics.',
     imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
@@ -238,7 +237,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p11',
     title: 'SuperStore Sales Data',
-    description: '🛒 E-commerce retail engine analyzing multi-regional profit margins and inventory turnover.',
+    description: ' E-commerce retail engine analyzing multi-regional profit margins and inventory turnover.',
     imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
@@ -253,7 +252,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p12',
     title: 'Credit Card Fraud Detection',
-    description: '💳 Neural anomaly detection system for high-precision identification of fraudulent transactions.',
+    description: ' Neural anomaly detection system for high-precision identification of fraudulent transactions.',
     imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
@@ -266,7 +265,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p13',
     title: 'Iris Classification Model',
-    description: '🌸 Optimized multi-class classification engine for botanical taxonomy using Scikit-learn.',
+    description: ' Optimized multi-class classification engine for botanical taxonomy using Scikit-learn.',
     imageUrl: 'https://images.unsplash.com/photo-1520412099551-6296b0db5c04?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1520412099551-6296b0db5c04?auto=format&fit=crop&q=80&w=800',
@@ -279,7 +278,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p14',
     title: 'Sales Advertising Analysis',
-    description: '📈 Regression-based intelligence analyzing ad-spend efficiency versus revenue growth.',
+    description: ' Regression-based intelligence analyzing ad-spend efficiency versus revenue growth.',
     imageUrl: 'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800',
@@ -292,7 +291,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p15',
     title: 'Unemployment Prediction Model',
-    description: '📉 Time-series forecasting engine predicting economic workforce shifts and labor trends.',
+    description: ' Time-series forecasting engine predicting economic workforce shifts and labor trends.',
     imageUrl: 'https://images.unsplash.com/photo-1454165833767-13a6b060102b?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1454165833767-13a6b060102b?auto=format&fit=crop&q=80&w=800',
@@ -307,7 +306,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p16',
     title: 'IPO Platform',
-    description: '📈 Specialized fintech engine for tracking public offering dynamics and investor data.',
+    description: ' Specialized fintech engine for tracking public offering dynamics and investor data.',
     imageUrl: 'https://images.unsplash.com/photo-1611974714024-4607a50d6c2a?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1611974714024-4607a50d6c2a?auto=format&fit=crop&q=80&w=800',
@@ -320,7 +319,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'p17',
     title: 'VAS Business Website',
-    description: '🏢 Enterprise portal for Value Added Services (VAS) commercial logistics and client ops.',
+    description: ' Enterprise portal for Value Added Services (VAS) commercial logistics and client ops.',
     imageUrl: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800',
     galleryUrls: [
       'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800',
