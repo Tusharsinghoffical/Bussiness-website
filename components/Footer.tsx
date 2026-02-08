@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         
         {/* Technical Watermark - Responsive Size */}
         <div className="absolute bottom-4 left-4 text-[12vw] lg:text-[18vw] font-black text-white/[0.02] select-none tracking-tighter leading-none pointer-events-none">
-          SINGH
+          CMS
         </div>
         
         {/* Grid Texture */}
@@ -100,11 +100,11 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-4 lg:space-y-8">
             <h3 className="text-white font-black text-[8px] lg:text-[10px] uppercase tracking-[0.3em] opacity-40">Registry</h3>
             <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-2 lg:gap-y-4">
-              <FooterLink to="/" label="Home Base" />
-              <FooterLink to="/services" label="Solutions" />
-              <FooterLink to="/projects" label="Artifacts" />
-              <FooterLink to="/about" label="Identity" />
-              <FooterLink to="/contact" label="Interface" />
+              <FooterLink to="/" label="Home " />
+              <FooterLink to="/services" label="Services" />
+              <FooterLink to="/projects" label="Projects" />
+              <FooterLink to="/about" label="About" />
+              <FooterLink to="/contact" label="Contact" />
             </ul>
           </div>
 
