@@ -21,7 +21,7 @@ const IdentityLogo: React.FC<LogoProps> = ({ className = "", size = 40, variant 
         <defs>
           <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#4f46e5" /> {/* indigo-600 */}
-            <stop offset="100%" stopColor="#7c3aed" /> {/* violet-600 */}
+            <stop offset="100%" stopColor="#773BEC" /> {/* Custom violet */}
           </linearGradient>
           
           <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">

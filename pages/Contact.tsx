@@ -54,7 +54,7 @@ Priority: ${data.priority}
 Message:
 ${data.message}
 
-Sent via CMS Contact Portal`;
+Sent via C.MS Contact Portal`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/918851619647?text=${encodedMessage}`;

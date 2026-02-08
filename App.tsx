@@ -99,7 +99,7 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
           </div>
           
           <h2 className={`text-white font-outfit font-black text-5xl sm:text-6xl tracking-[0.5em] uppercase transition-all duration-700 ${progress > 10 ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            CMS<span className="text-indigo-500 animate-pulse">.</span>
+            C.MS
           </h2>
           
           <div className="flex flex-col items-center gap-1">

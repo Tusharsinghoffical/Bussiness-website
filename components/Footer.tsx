@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <h2 className="text-3xl lg:text-4xl font-outfit font-black text-white tracking-tighter leading-none">
-                    CMS<span className="text-indigo-500">.</span>
+                    C.MS
                   </h2>
                   <div className="absolute -right-1 -top-1 w-1 h-1 bg-indigo-500 rounded-full animate-pulse"></div>
                 </div>
@@ -166,7 +166,7 @@ const Footer: React.FC = () => {
         <div className="pt-6 lg:pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 lg:gap-8">
           <div className="flex flex-col sm:flex-row items-center gap-2 lg:gap-4 text-center md:text-left">
             <p className="text-[7px] lg:text-[9px] font-black uppercase tracking-[0.25em] text-slate-700">
-              &copy; {currentYear} CMS.
+              &copy; {currentYear} C.MS
             </p>
             <span className="hidden sm:block w-0.5 h-0.5 rounded-full bg-slate-800"></span>
             <div className="flex items-center gap-1.5 text-[7px] lg:text-[9px] font-black uppercase tracking-[0.25em] text-slate-700">
