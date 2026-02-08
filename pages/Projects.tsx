@@ -9,82 +9,10 @@ import {
   Tag as TagIcon,
   X,
   LayoutGrid,
-  Calendar,
-  Layers,
-  ChevronLeft,
-  ChevronRight
+  Calendar
 } from 'lucide-react';
 
-const ProjectCarousel: React.FC<{ images: string[] }> = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  }, [images.length]);
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 3500);
-    return () => clearInterval(timer);
-  }, [nextSlide]);
-
-  return (
-    <div className="relative w-full h-full overflow-hidden group/carousel">
-      {/* Slides */}
-      <div 
-        className="flex h-full transition-transform duration-700 ease-in-out" 
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {images.map((img, idx) => (
-          <div key={idx} className="w-full h-full shrink-0">
-            <img 
-              src={img} 
-              alt={`Slide ${idx}`} 
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-
-      {/* Navigation Arrows */}
-      {images.length > 1 && (
-        <>
-          <button 
-            onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/60 text-white rounded-full transition-all opacity-0 group-hover/carousel:opacity-100 z-20 backdrop-blur-sm"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button 
-            onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/60 text-white rounded-full transition-all opacity-0 group-hover/carousel:opacity-100 z-20 backdrop-blur-sm"
-          >
-            <ChevronRight size={20} />
-          </button>
-        </>
-      )}
-
-      {/* Progress Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={(e) => { e.stopPropagation(); setCurrentIndex(idx); }}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              currentIndex === idx ? 'w-8 bg-indigo-500' : 'w-2 bg-white/40 hover:bg-white/60'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Overlay Vignette */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
-    </div>
-  );
-};
 
 const Projects: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -277,19 +205,10 @@ const Projects: React.FC = () => {
                 <X size={18} />
               </button>
 
-              {/* Automatic Carousel */}
-              <div className="lg:w-1/2 relative h-64 sm:h-[400px] lg:h-auto bg-slate-100 dark:bg-slate-950 shrink-0">
-                <ProjectCarousel images={selectedProject.galleryUrls || [selectedProject.imageUrl]} />
-                
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-30">
-                  <div className="px-3 py-1.5 bg-indigo-600 text-white text-[8px] font-black uppercase tracking-widest rounded-lg flex items-center gap-2 shadow-lg">
-                    <Layers size={10} className="animate-pulse" /> Technical Scan
-                  </div>
-                </div>
-              </div>
+
 
               {/* Project Brief */}
-              <div className="lg:w-1/2 p-6 sm:p-12 lg:p-16 flex flex-col justify-center">
+              <div className="w-full p-6 sm:p-12 lg:p-16 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                    <p className="text-[9px] font-black text-indigo-500 uppercase tracking-[0.3em]">{selectedProject.category}</p>
                    <div className="w-1 h-1 rounded-full bg-slate-200 dark:bg-slate-800"></div>
