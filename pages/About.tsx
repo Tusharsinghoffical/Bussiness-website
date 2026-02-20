@@ -26,8 +26,7 @@ const About: React.FC = () => {
         
         {/* --- COMPACT INTRO --- */}
         <div className="flex flex-col md:flex-row gap-12 items-center md:items-start mb-20">
-          <div className="w-44 h-56 sm:w-56 sm:h-72 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200 dark:shadow-slate-900/50 relative group shrink-0 border-4 border-white dark:border-slate-800">
-            <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 animate-pulse z-10"></div>
+          <div className="w-44 h-56 sm:w-56 sm:h-72 rounded-2xl overflow-hidden shadow-lg relative group shrink-0">
             <picture>
               <source srcSet="/me.webp" type="image/webp" />
               <source srcSet="/me-optimized.jpg" type="image/jpeg" />
@@ -35,15 +34,9 @@ const About: React.FC = () => {
                 src="/me-optimized.jpg" 
                 alt="Tushar Singh" 
                 loading="lazy"
-                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 blur-0 relative z-20"
-                onLoad={(e) => {
-                  e.currentTarget.classList.remove('blur-0');
-                  const skeleton = e.currentTarget.closest('.relative')?.querySelector('div:first-child');
-                  if (skeleton) skeleton.style.display = 'none';
-                }}
+                className="w-full h-full object-cover"
               />
             </picture>
-            <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/20 dark:from-indigo-600/40 to-transparent z-30"></div>
           </div>
           
           <div className="text-center md:text-left flex-1">

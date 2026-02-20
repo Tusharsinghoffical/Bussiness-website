@@ -55,22 +55,22 @@ const Contact: React.FC = () => {
       message: formData.get('message') as string,
     };
 
-    const whatsappMessage = `[PARTNER REGISTRY]
-🔹 Identity: ${data.name}
-📧 Endpoint: ${data.email}
-📱 Terminal: ${data.phone}
-🏢 Organization: ${data.company}
+    const whatsappMessage = `[CONTACT INFORMATION]
+🔹 Name: ${data.name}
+📧 Email: ${data.email}
+📱 Phone: ${data.phone}
+🏢 Company: ${data.company}
 
-[DEPLOYMENT SCOPE]
-⚡ System Category: ${data.service}
+[PROJECT DETAILS]
+⚡ Type: ${data.service}
 💰 Language: ${data.budget}
-🎯 Execution Priority: ${data.priority}
+⏱ Timeline: ${data.priority}
 
-[TECHNICAL BRIEFING]
+[PROJECT DESCRIPTION]
 ${data.message}
 
 ─────────────────
-📡 Sync via C.MS Portal • ${new Date().toLocaleString()}`;
+Sent via C.MS Website • ${new Date().toLocaleString()}`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/918851619647?text=${encodedMessage}`;
@@ -93,13 +93,13 @@ ${data.message}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-20">
           <div className="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-[0.3em] mb-6 shadow-md">
-              <Sparkles size={12} className="text-amber-400" /> Accepting Briefs
+              <Sparkles size={12} className="text-amber-400" /> Accepting Projects
             </div>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-outfit font-extrabold text-slate-950 dark:text-white tracking-tight leading-none mb-6">
-              Inquiry <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Portal.</span>
+              Contact <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Me.</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-              High-priority technical briefs receive immediate vetting via WhatsApp synchronization.
+              Get in touch for your project needs. I'll respond quickly via WhatsApp.
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ ${data.message}
                     <ArrowUpRight size={18} />
                   </a>
                 </div>
-                <p className="text-[8px] font-black text-slate-500 dark:text-slate-600 uppercase tracking-widest mb-1.5">Direct Secure</p>
+                <p className="text-[8px] font-black text-slate-500 dark:text-slate-600 uppercase tracking-widest mb-1.5">Email</p>
                 <h3 className="text-sm sm:text-base font-bold break-all">tusharsinghkumar04@gmail.com</h3>
               </div>
               <div className="mt-10 flex items-center gap-4 relative z-10">
@@ -136,7 +136,7 @@ ${data.message}
                 <MapPin size={22} />
               </div>
               <div>
-                <p className="text-[8px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-widest">Base Ops</p>
+                <p className="text-[8px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-widest">Location</p>
                 <p className="text-[14px] font-bold text-slate-900 dark:text-white">Delhi, India</p>
               </div>
               <div className="ml-auto hidden sm:flex items-center gap-2.5 px-4 py-2 bg-slate-50 dark:bg-slate-950 rounded-xl">
@@ -150,9 +150,9 @@ ${data.message}
                <div className="absolute -bottom-4 -right-4 opacity-10">
                   <Zap size={100} />
                </div>
-               <h3 className="text-base font-bold mb-3 relative z-10">Secure Sync.</h3>
+               <h3 className="text-base font-bold mb-3 relative z-10">Quick Response</h3>
                <p className="text-[13px] text-indigo-100 font-medium mb-6 relative z-10 leading-relaxed italic">
-                 "Encrypted direct-to-WhatsApp protocol for immediate architectural review."
+                 "I respond quickly to all messages. Let's discuss your project needs."
                </p>
                <div className="flex items-center gap-2.5 text-[9px] font-black uppercase tracking-widest bg-white/10 w-fit px-4 py-2 rounded-full border border-white/10 relative z-10">
                  <ShieldCheck size={12} className="text-white" /> Professional
@@ -168,10 +168,10 @@ ${data.message}
                   <div className="w-24 h-24 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-8 border border-emerald-100 dark:border-emerald-400/20 shadow-inner">
                     <CheckCircle size={40} />
                   </div>
-                  <h2 className="text-3xl sm:text-4xl font-outfit font-extrabold text-slate-950 dark:text-white mb-4 tracking-tight">Sync Established.</h2>
-                  <p className="text-base text-slate-500 dark:text-slate-400 mb-12 font-medium leading-relaxed max-w-sm mx-auto">Brief has been formatted. Complete the handshake in the WhatsApp tab.</p>
+                  <h2 className="text-3xl sm:text-4xl font-outfit font-extrabold text-slate-950 dark:text-white mb-4 tracking-tight">Message Sent!</h2>
+                  <p className="text-base text-slate-500 dark:text-slate-400 mb-12 font-medium leading-relaxed max-w-sm mx-auto">Your message has been sent. I'll contact you soon via WhatsApp.</p>
                   <button onClick={() => setStatus('idle')} className="w-full sm:w-auto px-10 py-5 bg-slate-950 dark:bg-white text-white dark:text-slate-950 rounded-2xl font-bold text-[11px] tracking-widest uppercase hover:bg-indigo-600 dark:hover:bg-indigo-50 transition-all shadow-md active:scale-95">
-                    New Connection
+                    Send Another Message
                   </button>
                 </div>
               ) : (
@@ -180,13 +180,13 @@ ${data.message}
                   <div className="space-y-8">
                     <div className="flex items-center gap-3 mb-2">
                        <Building2 size={16} className="text-indigo-600 dark:text-indigo-400" />
-                       <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-[0.2em]">Partner Registry</h3>
+                       <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-[0.2em]">Your Info</h3>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                      <FancyInput id={ids.name} name="name" label="Identity" placeholder="Tushar Singh" required icon={<User size={18} />} />
-                      <FancyInput id={ids.email} name="email" label="Endpoint (Email)" type="email" placeholder="tushar@example.com" required icon={<Mail size={18} />} />
-                      <FancyInput id={ids.phone} name="phone" label="Terminal (Phone)" placeholder="+91 88516 19647" required icon={<Phone size={18} />} />
-                      <FancyInput id={ids.company} name="company" label="Organization" placeholder="AB Infotech" required icon={<Briefcase size={18} />} />
+                      <FancyInput id={ids.name} name="name" label="Name" placeholder="Your name" required icon={<User size={18} />} />
+                      <FancyInput id={ids.email} name="email" label="Email" type="email" placeholder="your@email.com" required icon={<Mail size={18} />} />
+                      <FancyInput id={ids.phone} name="phone" label="Phone" placeholder="+91 88516 19647" required icon={<Phone size={18} />} />
+                      <FancyInput id={ids.company} name="company" label="Company" placeholder="Your company" required icon={<Briefcase size={18} />} />
                     </div>
                   </div>
 
@@ -194,11 +194,11 @@ ${data.message}
                   <div className="space-y-10">
                     <div className="flex items-center gap-3 mb-2">
                        <Zap size={16} className="text-amber-500" />
-                       <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-[0.2em]">Deployment Scope</h3>
+                       <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-[0.2em]">Project Type</h3>
                     </div>
                     
                     <div className="space-y-4">
-                      <span className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest block ml-1">System Category</span>
+                      <span className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest block ml-1">Type of Work</span>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                         {['Web Dev', 'AI Agents', 'Data Sci', 'Consulting'].map(item => (
                           <label key={item} className="cursor-pointer group">
@@ -219,7 +219,7 @@ ${data.message}
                       {prefilledService && (
                         <div className="text-center py-2 px-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg border border-indigo-100 dark:border-indigo-400/20">
                           <p className="text-[9px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
-                            Pre-selected: {prefilledService}
+                            Selected: {prefilledService}
                           </p>
                         </div>
                       )}
@@ -228,7 +228,7 @@ ${data.message}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-4">
                         <label className="flex items-center gap-2.5 text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest ml-1">
-                          <Wallet size={12} className="text-indigo-600 dark:text-indigo-400" /> Language
+                          <Wallet size={12} className="text-indigo-600 dark:text-indigo-400" /> Language Preference
                         </label>
                         <div className="relative group">
                           <select name="budget" className="w-full px-6 py-5 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 rounded-2xl focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-900 focus:ring-4 focus:ring-indigo-500/10 transition-all font-bold text-slate-950 dark:text-white text-xs sm:text-sm appearance-none cursor-pointer shadow-sm">
@@ -242,7 +242,7 @@ ${data.message}
 
                       <div className="space-y-4">
                         <label className="flex items-center gap-2.5 text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest ml-1">
-                          <Calendar size={12} className="text-indigo-600 dark:text-indigo-400" /> Execution Priority
+                          <Calendar size={12} className="text-indigo-600 dark:text-indigo-400" /> Timeline
                         </label>
                         <div className="relative group">
                           <select name="priority" className="w-full px-6 py-5 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 rounded-2xl focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-900 focus:ring-4 focus:ring-indigo-500/10 transition-all font-bold text-slate-950 dark:text-white text-xs sm:text-sm appearance-none cursor-pointer shadow-sm">
@@ -258,15 +258,15 @@ ${data.message}
 
                   {/* Objective */}
                   <div className="space-y-4">
-                    <label htmlFor={ids.message} className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest block ml-1">Technical Briefing</label>
+                    <label htmlFor={ids.message} className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest block ml-1">Project Details</label>
                     <textarea 
                       id={ids.message}
                       name="message"
                       required
                       rows={5}
                       placeholder={prefilledService 
-                        ? `Tell me more about your ${prefilledService.toLowerCase()} project requirements...`
-                        : "Specify outcomes, technical constraints, and mission objectives..."
+                        ? `Tell me about your ${prefilledService.toLowerCase()} project...`
+                        : "Describe your project needs..."
                       }
                       className="w-full px-6 py-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-white/5 rounded-[1.5rem] focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-900 focus:ring-4 focus:ring-indigo-500/10 transition-all font-medium resize-none text-slate-950 dark:text-white text-base placeholder:text-slate-400 dark:placeholder:text-slate-600 shadow-sm"
                     ></textarea>
@@ -282,7 +282,7 @@ ${data.message}
                         <div className="w-5 h-5 border-2 border-white/20 dark:border-slate-950/20 border-t-white dark:border-t-slate-950 rounded-full animate-spin"></div>
                       ) : (
                         <>
-                          Establish Connection Protocol
+                          Submit
                           <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </>
                       )}

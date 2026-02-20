@@ -23,7 +23,7 @@ export const SERVICES: Service[] = [
     id: 's2',
     title: 'Data Science & Analysis',
     description: 'Comprehensive data analysis and visualization using Python, Pandas, NumPy, and Power BI to uncover hidden patterns.',
-    priceRange: 'Starting at ₹15,000',
+    priceRange: 'Contact for Price',
     icon: 'BarChart',
     category: 'data-science',
     features: [
@@ -38,7 +38,7 @@ export const SERVICES: Service[] = [
     id: 's3',
     title: 'Web Development',
     description: 'Modern, responsive web applications and portfolios built with HTML, CSS, JavaScript, and Python.',
-    priceRange: 'Starting at ₹20,000',
+    priceRange: 'Contact for Price',
     icon: 'Code',
     category: 'web-dev',
     features: [
@@ -53,7 +53,7 @@ export const SERVICES: Service[] = [
     id: 's5',
     title: 'AI Agents',
     description: 'Custom AI agents that plan, reason, and execute tasks: research agents, data assistants, and workflow automations powered by modern LLM tooling.',
-    priceRange: 'Starting at ₹30,000',
+    priceRange: 'Contact for Price',
     icon: 'Terminal',
     category: 'ai-agents',
     features: [
@@ -68,7 +68,7 @@ export const SERVICES: Service[] = [
     id: 's6',
     title: 'Technical Solutions',
     description: 'Custom software solutions, automation tools, and technical consulting. I troubleshoot issues, optimize performance, and ensure smooth operation of applications across various platforms.',
-    priceRange: 'Starting at ₹10,000',
+    priceRange: 'Contact for Price',
     icon: 'Settings',
     category: 'web-dev',
     features: [
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
     id: 's7',
     title: 'Logo & Thumbnail Design',
     description: 'High-impact visual identities and click-worthy YouTube thumbnails designed to capture attention and build brand authority.',
-    priceRange: 'Starting at ₹5,000',
+    priceRange: 'Contact for Price',
     icon: 'Palette',
     category: 'design',
     features: [

@@ -45,9 +45,9 @@ const Services: React.FC = () => {
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-slate-950 dark:bg-white text-white dark:text-slate-950 rounded-2xl flex items-center justify-center group-hover:bg-indigo-600 dark:group-hover:bg-indigo-400 transition-colors shadow-lg group-hover:rotate-3 duration-500 shrink-0">
                   {React.cloneElement(ICON_MAP[service.icon as keyof typeof ICON_MAP] as React.ReactElement<any>, { className: 'w-6 h-6 sm:w-7 sm:h-7' })}
                 </div>
-                <div className="text-right">
+                <div className="text-right cursor-pointer" onClick={() => handleServiceClick(service)}>
                    <p className="text-[8px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-widest mb-0.5">Tier 1</p>
-                   <p className="text-xs font-outfit font-bold text-indigo-600 dark:text-indigo-400">{service.priceRange}</p>
+                   <p className="text-xs font-outfit font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-400 hover:underline transition-all">{service.priceRange}</p>
                 </div>
               </div>
 
