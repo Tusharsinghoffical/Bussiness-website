@@ -1,4 +1,6 @@
 
+'use client';
+
 import React, { useState, useId } from 'react';
 import { 
   Mail, Send, MapPin, Github, Linkedin, CheckCircle, 
@@ -197,7 +199,7 @@ Sent via C.MS Website • ${new Date().toLocaleString()}`;
                               type="radio" 
                               name="interest" 
                               value={item} 
-                              defaultChecked={prefilledService && item.includes(prefilledService.split(' ')[0])}
+                              defaultChecked={prefilledService ? item.includes(prefilledService.split(' ')[0]) : false}
                               className="sr-only peer" 
                               required 
                             />
