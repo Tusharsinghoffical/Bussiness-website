@@ -1,17 +1,20 @@
 services:
+  # Full-stack Web Service (Frontend + Backend API)
   - type: web
-    name: business-website
-    env: static
-    buildCommand: npm install && npm run build
-    staticPublishPath: ./dist
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: public, max-age=31536000, immutable
-    routes:
-      - type: rewrite
-        source: /
-        destination: /seo-index.html
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    name: codewithmrsingh-fullstack
+    env: node
+    region: oregon
+    buildCommand: |
+      npm install && npm run build
+      cd server && npm install
+    startCommand: |
+      cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: EMAIL_USER
+        sync: false  # encrypted - your Gmail address
+      - key: EMAIL_PASS
+        sync: false  # encrypted - your Gmail app password
+    autoDeploy: true
+    healthCheckPath: /health

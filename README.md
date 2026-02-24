@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🚀 Code with Mr. Singh - Portfolio Website
+# 🚀 Code with Mr. Singh - Business Website
 
 **Professional Portfolio showcasing Data Science, Web Development & AI Automation Expertise**
 
@@ -103,6 +103,12 @@ business-website/
 - **Smart Responses** - Context-aware conversations
 - **Real-time Processing** - Instant feedback
 
+### 📧 Contact Form
+- **Email Notifications** - Automatic email delivery to admin
+- **User Confirmation** - Auto-reply to users
+- **Secure Backend** - Protected email credentials
+- **Production Ready** - Works seamlessly on deployment platforms like Render
+
 ### 📱 User Experience
 - **Single Page Application** - Seamless navigation
 - **Lazy Loading** - Improved performance
@@ -122,9 +128,15 @@ business-website/
 
 2. **Setup on Render:**
    - Visit [render.com](https://render.com)
-   - Create Static Site
+   - Create both a Web Service for the backend API and a Static Site for the frontend
    - Connect your GitHub repository
-   - Configure:
+   - For the **Backend API Service**:
+     - **Build Command**: `cd server && npm install`
+     - **Start Command**: `cd server && npm start`
+     - **Environment Variables**:
+       - `EMAIL_USER`: Your Gmail address
+       - `EMAIL_PASS`: Your Gmail app password
+   - For the **Frontend Static Site**:
      - **Build Command**: `npm install && npm run build`
      - **Publish Directory**: `dist`
 
