@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
     };
 
     try {
-      const BACKEND_URL = 'https://codewithmrsingh-api.onrender.com'; // Replace with your actual backend URL
+      const BACKEND_URL = 'https://cms-backend-tqpu.onrender.com'; // Your deployed backend service URL
       const response = await fetch(`${BACKEND_URL}/api/contact`, {
         method: 'POST',
         headers: {
