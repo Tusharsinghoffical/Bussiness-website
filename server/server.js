@@ -1,0 +1,101 @@
+const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const path = require('path');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Middleware
+app.use(cors());
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true }));
+
+// Serve static files from the 'dist' folder
+app.use(express.static(path.join(__dirname, '../dist')));
+
+// Nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER || 'tusharsinghoffical@gmail.com',
+    pass: process.env.EMAIL_PASS || 'augx iyvt evab hxnc' // Use app password
+  }
+});
+
+// Contact form route
+app.post('/api/contact', async (req, res) => {
+  try {
+    const { name, email, phone, company, service, budget, timeline, priority, message } = req.body;
+
+    // Validate required fields
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: 'Name, email, and message are required' });
+    }
+
+    // Email to admin (you)
+    const adminMailOptions = {
+      from: `"Contact Form" <${process.env.EMAIL_USER || 'tusharsinghoffical@gmail.com'}>`,
+      to: process.env.EMAIL_USER || 'tusharsinghoffical@gmail.com',
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+        <p><strong>Company:</strong> ${company || 'N/A'}</p>
+        <p><strong>Service Interested In:</strong> ${service || 'N/A'}</p>
+        <p><strong>Budget/Language:</strong> ${budget || 'N/A'}</p>
+        <p><strong>Timeline:</strong> ${timeline || 'N/A'}</p>
+        <p><strong>Priority:</strong> ${priority || 'N/A'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+        <hr>
+        <p><em>Sent via your website contact form on ${new Date().toLocaleString()}</em></p>
+      `
+    };
+
+    // Confirmation email to user
+    const userMailOptions = {
+      from: `"Tushar Singh" <${process.env.EMAIL_USER || 'tusharsinghoffical@gmail.com'}>`,
+      to: email,
+      subject: 'Thank You for Contacting Tushar Singh',
+      html: `
+        <h2>Hello ${name},</h2>
+        <p>Thank you for reaching out to me. I have received your message and will get back to you as soon as possible.</p>
+        <p>In the meantime, here's a summary of your message:</p>
+        <blockquote style="padding: 10px; background-color: #f9f9f9; border-left: 3px solid #ccc;">
+          ${message.replace(/\n/g, '<br>')}
+        </blockquote>
+        <p>I typically respond within 24 hours. If you need urgent assistance, please feel free to call me at your convenience.</p>
+        <p>Best regards,<br>Tushar Singh<br>Freelance Data Scientist & Full-Stack Developer</p>
+        <hr>
+        <p><em>This is an automated response. Please do not reply to this email directly.</em></p>
+      `
+    };
+
+    // Send both emails
+    await transporter.sendMail(adminMailOptions);
+    await transporter.sendMail(userMailOptions);
+
+    res.status(200).json({ message: 'Emails sent successfully!' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'Failed to send email. Please try again later.' });
+  }
+});
+
+// Health check route
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
+// Serve index.html for any other routes (for SPA)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

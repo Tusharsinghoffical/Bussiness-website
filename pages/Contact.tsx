@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
     }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
 
@@ -49,30 +49,27 @@ const Contact: React.FC = () => {
       message: formData.get('message') as string,
     };
 
-    const whatsappMessage = `[CONTACT INFORMATION]
-🔹 Name: ${data.name}
-📧 Email: ${data.email}
-📱 Phone: ${data.phone}
-🏢 Company: ${data.company}
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-[PROJECT DETAILS]
-⚡ Type: ${data.service}
-💰 Language: ${data.budget}
-⏱ Timeline: ${data.priority}
-
-[PROJECT DESCRIPTION]
-${data.message}
-
-─────────────────
-Sent via C.MS Website • ${new Date().toLocaleString()}`;
-
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/918851619647?text=${encodedMessage}`;
-
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank');
-      setStatus('success');
-    }, 1000);
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.error || 'Failed to send message'}`);
+        setStatus('idle');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Network error. Please try again later.');
+      setStatus('idle');
+    }
   };
 
   return (
