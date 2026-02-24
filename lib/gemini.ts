@@ -7,7 +7,12 @@ import { GoogleGenAI } from "@google/genai";
  */
 export const chatWithGemini = async (message: string, fastMode: boolean = false) => {
   // Create a new instance right before making the API call to ensure it always uses the most up-to-date API key.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) {
+    console.warn('API key is not configured. AI assistant will return mock responses.');
+    return "I'm currently offline. Please contact Tushar directly for inquiries.";
+  }
+  const ai = new GoogleGenAI({ apiKey });
   // Using recommended model aliases: 'gemini-flash-lite-latest' for fast tasks, 'gemini-3-pro-preview' for complex ones.
   const model = fastMode ? 'gemini-flash-lite-latest' : 'gemini-3-pro-preview';
   
@@ -15,7 +20,7 @@ export const chatWithGemini = async (message: string, fastMode: boolean = false)
     model,
     contents: message,
     config: {
-        systemInstruction: "You are the AI Assistant for 'Code with Mr. Singh' (Tushar Singh). You are knowledgeable about Data Science, n8n automation, Python, Django, and React. Be professional, technical, and concise. Your goal is to help visitors understand Tushar's expertise and portfolio."
+        systemInstruction: `You are Singh AI Assistant, representing Tushar Singh, a freelance Data Scientist & Full-Stack Developer. Your responses must be accurate, specific, and based only on information from Tushar's portfolio. If asked about projects, mention specific project names from his portfolio. If asked about skills, reference specific technologies he specializes in. Be professional, concise, and helpful. Do not fabricate information. If you don't know specific details, say so and suggest contacting Tushar directly. His contact information is available on the Contact page.`
     }
   });
   
@@ -29,7 +34,12 @@ export const chatWithGemini = async (message: string, fastMode: boolean = false)
  */
 export const thinkDeeply = async (prompt: string) => {
   // Create a new instance right before making the API call to ensure it always uses the most up-to-date API key.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) {
+    console.warn('API key is not configured. Advanced AI features unavailable.');
+    return "Advanced AI features are currently unavailable due to missing API key.";
+  }
+  const ai = new GoogleGenAI({ apiKey });
   
   // Complex Text Tasks (e.g., advanced reasoning, coding): 'gemini-3-pro-preview'
   const response = await ai.models.generateContent({
@@ -52,7 +62,12 @@ export const thinkDeeply = async (prompt: string) => {
  */
 export const generateImage = async (prompt: string, aspectRatio: string = '1:1') => {
   // Create a new instance right before making the API call to ensure it always uses the most up-to-date API key.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) {
+    console.warn('API key is not configured. Image generation unavailable.');
+    throw new Error("Image generation is currently unavailable due to missing API key.");
+  }
+  const ai = new GoogleGenAI({ apiKey });
   
   // High-Quality Image Generation Tasks: 'gemini-3-pro-image-preview'
   const response = await ai.models.generateContent({
