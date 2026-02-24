@@ -1,11 +1,10 @@
 services:
-  # Full-stack Web Service (Frontend + Backend API)
+  # Backend API Service
   - type: web
-    name: codewithmrsingh-fullstack
+    name: codewithmrsingh-api
     env: node
     region: oregon
     buildCommand: |
-      npm install && npm run build
       cd server && npm install
     startCommand: |
       cd server && npm start
@@ -18,3 +17,23 @@ services:
         sync: false  # encrypted - your Gmail app password
     autoDeploy: true
     healthCheckPath: /health
+
+  # Frontend Static Site
+  - type: static
+    name: codewithmrsingh-frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+    routes:
+      - type: rewrite
+        source: /
+        destination: /seo-index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_ENV
+        value: production

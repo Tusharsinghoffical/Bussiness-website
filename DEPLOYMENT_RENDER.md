@@ -20,9 +20,9 @@ The server will automatically use Render's assigned port via `process.env.PORT`.
 
 For the frontend to communicate with your backend API when deployed:
 
-1. The contact form will send POST requests to `/api/contact`
-2. When deployed, this will be proxied to your backend service
-3. In development, it connects to localhost:5000
+1. The contact form will send POST requests to your backend service
+2. You'll need to update the BACKEND_URL in `pages/Contact.tsx` with your actual deployed backend service URL
+3. The backend service will handle email sending and respond to the frontend
 
 ## Deployment Steps
 

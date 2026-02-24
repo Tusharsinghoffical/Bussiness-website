@@ -50,7 +50,8 @@ const Contact: React.FC = () => {
     };
 
     try {
-      const response = await fetch('/api/contact', {
+      const BACKEND_URL = 'https://codewithmrsingh-api.onrender.com'; // Replace with your actual backend URL
+      const response = await fetch(`${BACKEND_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
