@@ -19,20 +19,34 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from the 'dist' folder
 app.use(express.static(path.join(__dirname, '../dist')));
 
-// Nodemailer transporter
-const transporter = nodemailer.createTransport({
+// Nodemailer transporter - Gmail configuration
+const gmailTransporter = nodemailer.createTransport({
   service: 'gmail',
   host: 'smtp.gmail.com',
   port: 587,
-  secure: false, // true for 465, false for other ports
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER || 'tusharsinghoffical@gmail.com',
-    pass: process.env.EMAIL_PASS || 'augx iyvt evab hxnc' // Use app password
+    pass: process.env.EMAIL_PASS || 'augx iyvt evab hxnc'
   },
   tls: {
     rejectUnauthorized: false
   }
 });
+
+// Fallback transporter - Direct SMTP
+const fallbackTransporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.EMAIL_USER || 'tusharsinghoffical@gmail.com',
+    pass: process.env.EMAIL_PASS || 'augx iyvt evab hxnc'
+  }
+});
+
+// Use Gmail transporter as default
+let transporter = gmailTransporter;
 
 // Contact form route
 app.post('/api/contact', async (req, res) => {
@@ -85,9 +99,23 @@ app.post('/api/contact', async (req, res) => {
       `
     };
 
-    // Send both emails
-    await transporter.sendMail(adminMailOptions);
-    await transporter.sendMail(userMailOptions);
+    // Try primary transporter first
+    try {
+      await transporter.sendMail(adminMailOptions);
+      await transporter.sendMail(userMailOptions);
+    } catch (primaryError) {
+      console.error('Primary transporter failed:', primaryError);
+      // Try fallback transporter
+      console.log('Trying fallback transporter...');
+      try {
+        await fallbackTransporter.sendMail(adminMailOptions);
+        await fallbackTransporter.sendMail(userMailOptions);
+      } catch (fallbackError) {
+        console.error('Fallback transporter also failed:', fallbackError);
+        // If both fail, throw the original error
+        throw primaryError;
+      }
+    }
 
     res.status(200).json({ message: 'Emails sent successfully!' });
   } catch (error) {
@@ -111,21 +139,34 @@ app.get('/health', (req, res) => {
 
 // Email test route
 app.get('/test-email', async (req, res) => {
+  const results = {};
+  
+  // Test Gmail transporter
   try {
-    await transporter.verify();
-    res.status(200).json({ 
-      status: 'Email configuration OK', 
-      user: process.env.EMAIL_USER || 'Not set',
-      timestamp: new Date().toISOString() 
-    });
+    await gmailTransporter.verify();
+    results.gmail = 'OK';
   } catch (error) {
-    console.error('Email test failed:', error);
-    res.status(500).json({ 
-      status: 'Email configuration failed',
-      error: error.message,
-      user: process.env.EMAIL_USER || 'Not set'
-    });
+    console.error('Gmail test failed:', error.message);
+    results.gmail = `Failed: ${error.message}`;
   }
+  
+  // Test fallback transporter
+  try {
+    await fallbackTransporter.verify();
+    results.fallback = 'OK';
+  } catch (error) {
+    console.error('Fallback test failed:', error.message);
+    results.fallback = `Failed: ${error.message}`;
+  }
+  
+  const overallStatus = results.gmail === 'OK' || results.fallback === 'OK' ? 'OK' : 'Failed';
+  
+  res.status(200).json({ 
+    status: overallStatus,
+    transporters: results,
+    user: process.env.EMAIL_USER || 'Not set',
+    timestamp: new Date().toISOString() 
+  });
 });
 
 // Serve index.html for any other routes (for SPA)
