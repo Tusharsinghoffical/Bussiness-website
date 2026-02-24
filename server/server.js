@@ -22,9 +22,15 @@ app.use(express.static(path.join(__dirname, '../dist')));
 // Nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
     user: process.env.EMAIL_USER || 'tusharsinghoffical@gmail.com',
     pass: process.env.EMAIL_PASS || 'augx iyvt evab hxnc' // Use app password
+  },
+  tls: {
+    rejectUnauthorized: false
   }
 });
 
@@ -86,13 +92,40 @@ app.post('/api/contact', async (req, res) => {
     res.status(200).json({ message: 'Emails sent successfully!' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Failed to send email. Please try again later.' });
+    console.error('Error details:', {
+      code: error.code,
+      command: error.command,
+      message: error.message
+    });
+    res.status(500).json({ 
+      error: 'Failed to send email. Please try again later.',
+      details: process.env.NODE_ENV === 'production' ? 'Internal server error' : error.message
+    });
   }
 });
 
 // Health check route
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
+// Email test route
+app.get('/test-email', async (req, res) => {
+  try {
+    await transporter.verify();
+    res.status(200).json({ 
+      status: 'Email configuration OK', 
+      user: process.env.EMAIL_USER || 'Not set',
+      timestamp: new Date().toISOString() 
+    });
+  } catch (error) {
+    console.error('Email test failed:', error);
+    res.status(500).json({ 
+      status: 'Email configuration failed',
+      error: error.message,
+      user: process.env.EMAIL_USER || 'Not set'
+    });
+  }
 });
 
 // Serve index.html for any other routes (for SPA)
