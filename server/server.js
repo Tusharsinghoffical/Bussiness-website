@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? [process.env.CLIENT_URL || 'https://codewithmrsingh.onrender.com'] 
+    ? [process.env.CLIENT_URL || 'https://cms-backend-tqpu.onrender.com'] 
     : ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'http://localhost:5173', 'http://localhost:5174']
 }));
 app.use(express.json({ limit: '10mb' }));

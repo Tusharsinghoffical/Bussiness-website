@@ -1,10 +1,12 @@
 services:
-  # Backend API Service
+  # Backend API Service (serves both API and frontend)
   - type: web
-    name: codewithmrsingh-api
+    name: tushar-portfolio
     env: node
     region: oregon
     buildCommand: |
+      npm install
+      npm run build
       cd server && npm install
     startCommand: |
       cd server && npm start
