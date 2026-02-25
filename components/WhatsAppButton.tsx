@@ -85,7 +85,7 @@ const WhatsAppButton: React.FC = () => {
           href={whatsappUrl}
           target="_blank" 
           rel="noopener noreferrer"
-          className="group relative flex items-center gap-0 hover:gap-3 bg-emerald-500 text-white rounded-full p-4 sm:p-4 shadow-[0_20px_50px_rgba(16,185,129,0.3)] transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) active:scale-95 mt-16"
+          className="group relative flex items-center gap-0 hover:gap-3 bg-emerald-500 text-white rounded-full p-4 sm:p-4 shadow-[0_20px_50px_rgba(16,185,129,0.3)] transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) active:scale-95"
           aria-label="Chat on WhatsApp"
         >
           {/* Animated Background Ring */}
