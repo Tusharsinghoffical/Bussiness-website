@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, Linkedin, Github, Instagram, Globe } from 'lucide-react';
+import { MessageCircle, Linkedin, Github, Instagram, Globe } from 'lucide-react';
 
 const WhatsAppButton: React.FC = () => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
@@ -47,65 +47,67 @@ const WhatsAppButton: React.FC = () => {
           </div>
         </a>
         
-        {/* Social Media Toggle Button */}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            setShowSocialMedia(!showSocialMedia);
-          }}
-          className="absolute -top-16 right-0 bg-indigo-500 text-white rounded-full p-3 shadow-[0_10px_30px_rgba(99,102,241,0.3)] transition-all duration-300 hover:bg-indigo-600 active:scale-95"
-          aria-label="Toggle Social Media"
+        {/* Social Media Toggle Button with Hover Effect */}
+        <div 
+          className="absolute -top-16 right-0"
+          onMouseEnter={() => setShowSocialMedia(true)}
+          onMouseLeave={() => setShowSocialMedia(false)}
         >
-          <div className="w-6 h-6 flex items-center justify-center">
-            {showSocialMedia ? <X size={16} /> : <Globe size={16} />}
-          </div>
-        </button>
+          <button
+            className="bg-indigo-500 text-white rounded-full p-3 shadow-[0_10px_30px_rgba(99,102,241,0.3)] transition-all duration-300 hover:bg-indigo-600 active:scale-95"
+            aria-label="View Social Media"
+          >
+            <div className="w-6 h-6 flex items-center justify-center">
+              <Globe size={16} />
+            </div>
+          </button>
 
-        {/* Social Media Links */}
-        {showSocialMedia && (
-          <div className="absolute -top-40 right-0 flex flex-col items-center gap-3 bg-slate-800/90 backdrop-blur-sm p-3 rounded-2xl border border-slate-700 shadow-xl z-10 animate-fadeIn">
-            {/* LinkedIn */}
-            <a 
-              href="https://linkedin.com/in/tusharsingh2011" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-blue-500 text-white rounded-full p-3 hover:bg-blue-600 transition-colors shadow-md active:scale-95"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-            {/* GitHub */}
-            <a 
-              href="https://github.com/Tusharsinghoffical" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-gray-700 text-white rounded-full p-3 hover:bg-gray-800 transition-colors shadow-md active:scale-95"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
-            {/* YouTube */}
-            <a 
-              href="https://www.youtube.com/@codewithmrsingh4u" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-red-500 text-white rounded-full p-3 hover:bg-red-600 transition-colors shadow-md active:scale-95"
-              aria-label="YouTube"
-            >
-              <Globe size={20} />
-            </a>
-            {/* Instagram */}
-            <a 
-              href="https://www.instagram.com/codewith_mrsingh/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-full p-3 hover:from-purple-600 hover:to-pink-600 transition-colors shadow-md active:scale-95"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} />
-            </a>
-          </div>
-        )}
+          {/* Social Media Links - Show on hover */}
+          {showSocialMedia && (
+            <div className="absolute -top-40 right-0 flex flex-col items-center gap-3 bg-slate-800/90 backdrop-blur-sm p-3 rounded-2xl border border-slate-700 shadow-xl z-10 animate-fadeIn">
+              {/* LinkedIn */}
+              <a 
+                href="https://linkedin.com/in/tusharsingh2011" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-blue-500 text-white rounded-full p-3 hover:bg-blue-600 transition-colors shadow-md active:scale-95"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              {/* GitHub */}
+              <a 
+                href="https://github.com/Tusharsinghoffical" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 text-white rounded-full p-3 hover:bg-gray-800 transition-colors shadow-md active:scale-95"
+                aria-label="GitHub"
+              >
+                <Github size={20} />
+              </a>
+              {/* YouTube */}
+              <a 
+                href="https://www.youtube.com/@codewithmrsingh4u" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-red-500 text-white rounded-full p-3 hover:bg-red-600 transition-colors shadow-md active:scale-95"
+                aria-label="YouTube"
+              >
+                <Globe size={20} />
+              </a>
+              {/* Instagram */}
+              <a 
+                href="https://www.instagram.com/codewith_mrsingh/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-full p-3 hover:from-purple-600 hover:to-pink-600 transition-colors shadow-md active:scale-95"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+            </div>
+          )}
+        </div>
 
         {/* Mobile-only small tooltip */}
         <div className="absolute bottom-full right-0 mb-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block">
