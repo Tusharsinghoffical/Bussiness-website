@@ -6,6 +6,7 @@ import {
   ShieldCheck, Phone, Building2, Wallet, Calendar, 
   User, Briefcase, ChevronDown, Instagram
 } from 'lucide-react';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const Contact: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
@@ -286,6 +287,7 @@ const Contact: React.FC = () => {
                 </form>
               )}
             </div>
+            <WhatsAppButton />
           </div>
         </div>
       </div>
