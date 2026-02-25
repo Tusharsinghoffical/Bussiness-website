@@ -126,6 +126,12 @@ const Footer: React.FC = () => {
                 color="hover:text-white"
               />
               <SocialNode 
+                href="https://www.youtube.com/@codewithmrsingh4u" 
+                icon={<Globe size={14} />} 
+                label="YouTube"
+                color="hover:text-red-400"
+              />
+              <SocialNode 
                 href="https://www.instagram.com/codewith_mrsingh/" 
                 icon={<Instagram size={14} />} 
                 label="Instagram"
