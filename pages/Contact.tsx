@@ -33,45 +33,49 @@ const Contact: React.FC = () => {
     }
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      phone: formData.get('phone') as string,
-      company: formData.get('company') as string,
-      service: formData.get('interest') as string,
-      budget: formData.get('budget') as string,
-      timeline: formData.get('timeline') as string,
-      priority: formData.get('priority') as string,
-      message: formData.get('message') as string,
-    };
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const company = formData.get('company') as string;
+    const service = formData.get('interest') as string;
+    const budget = formData.get('budget') as string;
+    const timeline = formData.get('timeline') as string;
+    const priority = formData.get('priority') as string;
+    const message = formData.get('message') as string;
 
-    try {
-      const BACKEND_URL = 'https://cms-backend-tqpu.onrender.com'; // Your deployed backend service URL
-      const response = await fetch(`${BACKEND_URL}/api/contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+    // Construct WhatsApp message
+    const whatsappMessage = `Hello Tushar, I'm interested in your services!
 
-      if (response.ok) {
-        setStatus('success');
-      } else {
-        const errorData = await response.json();
-        alert(`Error: ${errorData.error || 'Failed to send message'}`);
-        setStatus('idle');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Network error. Please try again later.');
-      setStatus('idle');
-    }
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Company: ${company}
+Service: ${service}
+Language: ${budget}
+Timeline: ${timeline}
+Priority: ${priority}
+
+Message: ${message}`;
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/918851619647?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
+    setStatus('success');
+    
+    // Reset form after a short delay
+    setTimeout(() => {
+      e.currentTarget.reset();
+    }, 2000);
   };
 
   return (
@@ -159,7 +163,7 @@ const Contact: React.FC = () => {
                     <CheckCircle size={40} />
                   </div>
                   <h2 className="text-3xl sm:text-4xl font-outfit font-extrabold text-slate-950 dark:text-white mb-4 tracking-tight">Message Sent!</h2>
-                  <p className="text-base text-slate-500 dark:text-slate-400 mb-12 font-medium leading-relaxed max-w-sm mx-auto">Your message has been sent. I'll contact you soon via WhatsApp.</p>
+                  <p className="text-base text-slate-500 dark:text-slate-400 mb-12 font-medium leading-relaxed max-w-sm mx-auto">Your details have been sent via WhatsApp. I'll contact you soon!</p>
                   <button onClick={() => setStatus('idle')} className="w-full sm:w-auto px-10 py-5 bg-slate-950 dark:bg-white text-white dark:text-slate-950 rounded-2xl font-bold text-[11px] tracking-widest uppercase hover:bg-indigo-600 dark:hover:bg-indigo-50 transition-all shadow-md active:scale-95">
                     Send Another Message
                   </button>
