@@ -109,21 +109,6 @@ const Navbar: React.FC = () => {
           
           {/* Utility Actions */}
           <div className="flex items-center gap-1 pr-1">
-            <a
-              href="https://www.youtube.com/@codewithmrsingh4u"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full transition-all group ${
-                isScrolled 
-                  ? 'bg-slate-50 dark:bg-slate-800 text-red-500 dark:text-red-400 border border-slate-200 dark:border-white/10' 
-                  : 'bg-white/10 dark:bg-slate-800/20 text-red-500 dark:text-red-400 backdrop-blur-sm'
-              } hover:border-red-500`}
-              aria-label="YouTube Channel"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="group-hover:scale-110 transition-transform duration-300">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
-            </a>
             <button 
               onClick={toggleTheme} 
               aria-label="Toggle Theme"
@@ -172,25 +157,7 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
           </div>
-          <div className="mt-6 space-y-4">
-            <a
-              href="https://www.youtube.com/@codewithmrsingh4u"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between w-full p-6 rounded-[2rem] bg-red-50 dark:bg-red-950/20 border border-red-100 dark:border-red-400/20 active:scale-95 transition-all shadow-sm"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-red-500 rounded-2xl flex items-center justify-center text-white shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </div>
-                <div className="text-left">
-                  <p className="text-[10px] font-bold text-red-500 uppercase tracking-widest">YouTube Channel</p>
-                  <p className="text-base font-bold text-slate-950 dark:text-white">Subscribe for Updates</p>
-                </div>
-              </div>
-            </a>
+          <div className="mt-12">
             <button 
               onClick={toggleTheme} 
               className="flex items-center justify-between w-full p-6 rounded-[2rem] bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 active:scale-95 transition-all shadow-sm"
