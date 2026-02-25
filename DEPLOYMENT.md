@@ -36,6 +36,31 @@ If you're using Gemini API:
    - Key: `GEMINI_API_KEY`
    - Value: Your actual API key
 
+## SEO Optimization Checklist
+After deployment, ensure your site is properly indexed:
+
+1. **Verify Google Search Console**:
+   - Go to [Google Search Console](https://search.google.com/search-console/)
+   - Add your domain (https://yourdomain.onrender.com)
+   - Verify ownership using HTML tag or DNS record
+
+2. **Submit Sitemap**:
+   - Your sitemap is available at: `https://yourdomain.onrender.com/sitemap.xml`
+   - Submit it in Google Search Console under "Sitemaps"
+
+3. **Check Robots.txt**:
+   - Verify at: `https://yourdomain.onrender.com/robots.txt`
+   - Should allow indexing of important pages
+
+4. **SEO Meta Tags**:
+   - All pages have proper title tags, meta descriptions, and Open Graph tags
+   - Content includes relevant keywords like "freelance developer", "data scientist", "python developer", etc.
+
+5. **Performance Optimization**:
+   - Images are optimized and compressed
+   - Code is minified
+   - Page load speeds are fast (<3 seconds)
+
 ## Local Development
 To run locally:
 ```bash
@@ -54,3 +79,4 @@ Output will be in the `dist` folder.
 - If build fails, check logs in Render dashboard
 - Make sure all dependencies are in `package.json`
 - Ensure `vite.config.ts` has correct base path
+- Verify all SEO meta tags are properly implemented

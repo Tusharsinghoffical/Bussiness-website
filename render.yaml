@@ -9,10 +9,8 @@ services:
       - path: /*
         name: Cache-Control
         value: public, max-age=31536000, immutable
+    # Proper routing for SEO - serve index.html for all routes to handle client-side routing
     routes:
-      - type: rewrite
-        source: /
-        destination: /seo-index.html
       - type: rewrite
         source: /*
         destination: /index.html

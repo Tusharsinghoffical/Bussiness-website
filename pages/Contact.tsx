@@ -1,4 +1,3 @@
-
 import React, { useState, useId } from 'react';
 import { 
   Mail, Send, MapPin, Github, Linkedin, CheckCircle, 
@@ -19,7 +18,6 @@ const Contact: React.FC = () => {
     company: useId(),
     message: useId()
   };
-
 
 
   // Check for prefilled service data
@@ -93,10 +91,10 @@ Message: ${message}`;
               <Sparkles size={12} className="text-amber-400" /> Accepting Projects
             </div>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-outfit font-extrabold text-slate-950 dark:text-white tracking-tight leading-none mb-6">
-              Contact <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Me.</span>
+              Hire <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Freelance Developer.</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Get in touch for your project needs. I'll respond quickly via WhatsApp.
+              Contact India's top-rated freelance Data Scientist & Full-Stack Developer. Get expert solutions for your project needs via WhatsApp.
             </p>
           </div>
         </div>

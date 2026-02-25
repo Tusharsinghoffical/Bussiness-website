@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SERVICES, ICON_MAP } from '../constants';
@@ -27,9 +26,9 @@ const Services: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-400/20 text-indigo-600 dark:text-indigo-400 text-[10px] font-black uppercase tracking-[0.2em] mb-4">
             <Sparkles size={14} /> Solution Registry
           </div>
-          <h1 className="text-3xl sm:text-5xl font-outfit font-extrabold text-slate-950 dark:text-white mb-4 tracking-tight">Technical Packages.</h1>
+          <h1 className="text-3xl sm:text-5xl font-outfit font-extrabold text-slate-950 dark:text-white mb-4 tracking-tight">Freelance Development Services.</h1>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-medium leading-relaxed px-4">
-            Optimized service modules for high-performance business infrastructure and intelligent automation.
+            Top-rated freelance development services in Data Science, AI/ML, Web Development, and Automation. Expert solutions for businesses worldwide from Delhi, India.
           </p>
         </div>
 

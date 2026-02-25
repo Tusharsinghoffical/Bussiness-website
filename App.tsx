@@ -189,6 +189,7 @@ const PageWrapper: React.FC<{ children: React.ReactNode, title: string, descript
     setMeta('meta[property="og:title"]', `${title} | Code with Mr. Singh`);
     setMeta('meta[property="og:description"]', description);
     setMeta('meta[property="og:url"]', `https://codewithmrsingh.me${location.pathname}`);
+    setMeta('meta[property="og:type"]', 'website');
     setMeta('link[rel="canonical"]', `https://codewithmrsingh.me${location.pathname}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location, title, description]);

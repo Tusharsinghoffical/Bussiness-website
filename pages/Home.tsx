@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -68,7 +67,7 @@ const Home: React.FC = () => {
               </h1>
 
               <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 max-w-lg mb-10 sm:mb-12 leading-relaxed font-medium animate-fade-in-up delay-200 mx-auto lg:mx-0 px-2 sm:px-0">
-                Merging Data Science with Elite Software Engineering to build autonomous systems that redefine enterprise efficiency.
+                Freelance Data Scientist & Full-Stack Developer in Delhi. Merging Data Science with Elite Software Engineering to build autonomous systems that redefine enterprise efficiency.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10 sm:mb-14 animate-fade-in-up delay-300">
@@ -229,4 +228,8 @@ const StatItem = ({ number, label, delay = "" }: any) => (
   </div>
 );
 
-export default Home;
+export default () => (
+  <div>
+    <Home />
+  </div>
+);

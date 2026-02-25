@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
@@ -11,7 +10,6 @@ import {
   LayoutGrid,
   Calendar
 } from 'lucide-react';
-
 
 
 const Projects: React.FC = () => {
@@ -60,10 +58,10 @@ const Projects: React.FC = () => {
                 <Cpu size={12} className="text-indigo-400" /> Technical Registry
               </div>
               <h1 className="text-4xl sm:text-6xl font-outfit font-extrabold text-slate-950 dark:text-white tracking-tight leading-none mb-6 sm:mb-8">
-                System <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent italic">Artifacts.</span>
+                Freelance <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent italic">Development Projects.</span>
               </h1>
               <p className="text-sm sm:text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-xl">
-                A dynamic archive of high-performance deployments across enterprise data landscapes and autonomous software architectures.
+                Portfolio showcase of freelance development projects in Data Science, AI/ML, Web Development, and Automation. Expert solutions delivered from Delhi, India to global clients.
               </p>
             </div>
 
@@ -204,7 +202,6 @@ const Projects: React.FC = () => {
               >
                 <X size={18} />
               </button>
-
 
 
               {/* Project Brief */}

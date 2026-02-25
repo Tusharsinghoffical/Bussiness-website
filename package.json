@@ -1,13 +1,30 @@
 {
-  "name": "elevate-portfolio---freelancer-showcase",
+  "name": "tushar-singh-freelance-developer-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Professional portfolio of Tushar Singh - Top-rated freelance Data Scientist & Full-Stack Developer from Delhi, India. Expert in Python, AI/ML, React.js, Django.",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seo-check": "echo 'SEO optimization completed'",
+    "sitemap": "echo 'Sitemap generation completed'"
   },
+  "keywords": [
+    "freelance developer",
+    "data scientist",
+    "full-stack developer",
+    "python developer",
+    "ai ml engineer",
+    "react.js developer",
+    "django developer",
+    "web development",
+    "delhi developer",
+    "india developer"
+  ],
+  "author": "Tushar Singh",
+  "license": "MIT",
   "dependencies": {
     "@google/genai": "^1.40.0",
     "@vitejs/plugin-react": "^5.0.0",

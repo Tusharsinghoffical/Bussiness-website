@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
+Disallow: /server/
+Disallow: /node_modules/
+Disallow: /package*.json
+Disallow: /README.md
 
+# Allow important files
+Allow: /sitemap.xml
+Allow: /seo-index.html
+
+# Crawl-delay for politeness
+Crawl-delay: 5
+
+# Sitemap location
 Sitemap: https://codewithmrsingh.me/sitemap.xml
+
+# Host directive
+Host: https://codewithmrsingh.me

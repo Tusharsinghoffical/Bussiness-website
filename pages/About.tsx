@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Briefcase, 
@@ -32,7 +31,7 @@ const About: React.FC = () => {
               <source srcSet="/me-optimized.jpg" type="image/jpeg" />
               <img 
                 src="/me-optimized.jpg" 
-                alt="Tushar Singh" 
+                alt="Tushar Singh - Freelance Data Scientist & Full-Stack Developer" 
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
@@ -47,7 +46,7 @@ const About: React.FC = () => {
               Tushar <span className="text-indigo-600 dark:text-indigo-400">Singh.</span>
             </h1>
             <p className="text-base text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-8 max-w-2xl">
-              Data Analyst and Full-Stack Developer with hands-on experience in Python, SQL, and AI-driven automation. Proven ability to analyze 120,000+ record datasets and build scalable web architectures that translate complex requirements into high-performance solutions.
+              Top-rated freelance Data Scientist & Full-Stack Developer from Delhi, India. Expert in Python, AI/ML, React.js, and Django. Proven ability to analyze 120,000+ record datasets and build scalable web architectures that translate complex requirements into high-performance solutions.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-3">
                <div className="flex items-center gap-2 text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest bg-slate-50 dark:bg-slate-900 px-4 py-2 rounded-xl border border-slate-100 dark:border-white/5">
@@ -77,14 +76,14 @@ const About: React.FC = () => {
                   company="Self-Employed"
                   period="Jan 2025 - Present"
                   location="Remote"
-                  desc="Developing responsive full-stack applications using Java, Python, and Bootstrap. Delivering client-based E-commerce platforms and data analysis dashboards powered by REST APIs for real-time insights."
+                  desc="Developing responsive full-stack applications using Java, Python, and Bootstrap. Delivering client-based E-commerce platforms and data analysis dashboards powered by REST APIs for real-time insights. Top-rated freelance developer in India."
                 />
                 <ExperienceItem 
                   role="Data Analyst Intern"
                   company="AB Infotech Solutions"
                   period="Jun 2025 - Sep 2025"
                   location="Onsite — Pune"
-                  desc="Analyzed 120,000+ sales and HR records using Python (Pandas/NumPy) and SQL. Built interactive Power BI/Tableau dashboards and automated reporting workflows, reducing manual processing time by 25%."
+                  desc="Analyzed 120,000+ sales and HR records using Python (Pandas/NumPy) and SQL. Built interactive Power BI/Tableau dashboards and automated reporting workflows, reducing manual processing time by 25%. Expert freelance data scientist skills applied."
                 />
               </div>
             </section>
@@ -189,7 +188,7 @@ const About: React.FC = () => {
                </div>
               <h3 className="text-sm font-black uppercase tracking-widest mb-3 relative z-10 text-indigo-400 dark:text-indigo-600">Core Mission</h3>
               <p className="text-slate-400 dark:text-slate-600 text-[13px] relative z-10 leading-relaxed font-medium italic">
-                "Specializing in the nexus between data cleaning and software development. I build systems that automate the mundane to focus on the monumental."
+                "Specializing in the nexus between data cleaning and software development. I build systems that automate the mundane to focus on the monumental. Top-rated freelance developer in India."
               </p>
             </div>
           </div>

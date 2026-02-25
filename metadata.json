@@ -1,5 +1,21 @@
 {
-  "name": "Elevate Portfolio - Freelancer Showcase",
-  "description": "A high-end, responsive portfolio for a multi-disciplinary freelancer specializing in Data Science, Web Dev, and AI Agents.",
+  "name": "Tushar Singh - Top Freelance Developer India | Python, AI/ML, React.js",
+  "description": "Hire India's top-rated freelance Data Scientist & Full-Stack Developer. Expert in Python, AI/ML, React.js, Django. Build scalable web apps & data solutions. Based in Delhi.",
+  "keywords": [
+    "freelance developer India",
+    "freelance developer Delhi",
+    "Python developer",
+    "AI ML engineer",
+    "React.js developer",
+    "Django developer",
+    "Data Scientist",
+    "web development",
+    "freelance programmer",
+    "remote developer"
+  ],
+  "author": "Tushar Singh",
+  "robots": "index, follow",
+  "sitemap": "/sitemap.xml",
+  "canonical": "https://codewithmrsingh.me",
   "requestFramePermissions": []
 }

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TESTIMONIALS } from '../constants';
 import { Testimonial } from '../types';
@@ -16,11 +15,11 @@ const Testimonials: React.FC = () => {
             <ShieldCheck size={12} className="text-emerald-400" /> Verified Registry
           </div>
           <h1 className="text-3xl sm:text-5xl font-outfit font-extrabold text-slate-950 dark:text-white mb-4 tracking-tight leading-tight">
-            Validation & <br />
-            <span className="text-indigo-600 dark:text-indigo-400">Performance.</span>
+            Client <br />
+            <span className="text-indigo-600 dark:text-indigo-400">Testimonials.</span>
           </h1>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
-            Technical audits and feedback from global partners specializing in automation and high-performance infrastructure.
+            Real feedback from satisfied clients who hired India's top-rated freelance Data Scientist & Full-Stack Developer. Verified results from Delhi-based expert.
           </p>
         </div>
 
@@ -39,8 +38,8 @@ const Testimonials: React.FC = () => {
                 <div className="w-6 h-[1.5px] bg-indigo-600 dark:bg-indigo-400"></div>
                 <span className="text-[9px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-[0.3em]">Visual Evidence</span>
               </div>
-              <h2 className="text-2xl sm:text-4xl font-outfit font-extrabold text-slate-950 dark:text-white tracking-tight">Artifact Exchange.</h2>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">Confirmed completions and client satisfaction snapshots.</p>
+              <h2 className="text-2xl sm:text-4xl font-outfit font-extrabold text-slate-950 dark:text-white tracking-tight">Project Success Stories.</h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">Confirmed completions and client satisfaction snapshots from freelance development projects.</p>
             </div>
           </div>
 
@@ -64,15 +63,15 @@ const Testimonials: React.FC = () => {
                <div className="absolute -top-10 -right-10 text-white/5 group-hover:rotate-12 transition-transform duration-1000">
                   <MessageSquare size={120} />
                </div>
-               <h3 className="text-lg font-bold mb-2 relative z-10">Scalable Results.</h3>
+               <h3 className="text-lg font-bold mb-2 relative z-10">Hire Expert Freelancer.</h3>
                <p className="text-[11px] text-slate-400 mb-6 relative z-10 font-medium leading-relaxed italic">
-                 "Join the technical registry of high-performing enterprises."
+                 "Join the registry of enterprises who achieved results with India's top freelance developer."
                </p>
                <Link 
                 to="/contact"
                 className="bg-white dark:bg-indigo-600 text-slate-950 dark:text-white py-3 px-6 rounded-xl font-black text-[9px] uppercase tracking-widest hover:bg-indigo-600 dark:hover:bg-indigo-700 hover:text-white transition-all relative z-10 shadow-lg flex items-center justify-center gap-2 group/btn"
               >
-                  Initiate Protocol
+                  Hire Freelance Developer
                   <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                </Link>
             </div>
