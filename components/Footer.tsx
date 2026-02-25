@@ -137,12 +137,7 @@ const Footer: React.FC = () => {
                 label="Instagram"
                 color="hover:text-pink-400"
               />
-              <SocialNode 
-                href="mailto:tusharsinghkumar04@gmail.com" 
-                icon={<Mail size={14} />} 
-                label="Mail"
-                color="hover:text-indigo-400"
-              />
+             
             </div>
           </div>
 
